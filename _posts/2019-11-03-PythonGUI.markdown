@@ -90,7 +90,10 @@ The result is shown in the web page, a PNG file of the graph is also generated i
 ### Generated file locations
 All generated files (including CSV files and graphs images) are placed in `\PythonGUI\Source Code\results`. 
 
-> Note: For Mac Operating systems, the folder is placed in `\PythonGUI\GUI_Mac\Server.app\Contents\Resources`.
+> Note: For Mac Operating systems, the folder is placed in
+```
+\PythonGUI\GUI_Mac\Server.app\Contents\Resources
+```
 
 ## Troubleshooting
 ### Reloading
