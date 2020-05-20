@@ -4,7 +4,6 @@ title:  "Blockchain-Vis"
 author: Aaron Ti
 date:   2020-05-06
 category: Programming
-keywords: Blockchain Visualization
 abstract: P5JS Visualization for Golang Blockchain. Features Proof of Work, P2P Connection and Automatic Peer Discovery, and Web Visualization of Block Network
 website: https://github.com/mcdulltii/blockchain-vis
 ---

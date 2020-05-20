@@ -4,7 +4,6 @@ title:  "TinyScreen"
 author: Aaron Ti
 date:   2019-11-26
 category: Programming
-keywords: TinyScreen
 abstract: Arduino Script Generation Using Python for TinyCircuits
 website: https://github.com/mcdulltii/TinyScreen
 ---

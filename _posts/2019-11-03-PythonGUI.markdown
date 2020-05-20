@@ -4,7 +4,6 @@ title:  "PythonGUI"
 author: Aaron Ti
 date:   2019-11-03
 category: Programming
-keywords: PythonGUI
 abstract: Self-created Python Server for CSV Analytics. Features tkInter and Web UI for CSV Analytics
 website: https://github.com/mcdulltii/PythonGUI
 ---

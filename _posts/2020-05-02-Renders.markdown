@@ -4,7 +4,6 @@ title:  "Renders"
 author: Aaron Ti
 date:   2020-05-02
 category: Programming
-keywords: Renders
 abstract: Image renders & animations I've made over the years. Photoshop-free Images
 website: https://github.com/mcdulltii/pages
 ---

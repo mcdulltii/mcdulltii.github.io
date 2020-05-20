@@ -4,7 +4,6 @@ title:  "CChatbot"
 author: Aaron Ti
 date:   2020-01-29
 category: Programming
-keywords: CChatbot
 abstract: Chatbot in C. Features Linked List and Hashtable Methods
 website: https://github.com/mcdulltii/CChatbot
 ---

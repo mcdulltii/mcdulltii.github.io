@@ -4,7 +4,6 @@ title:  "DVWA-ELK"
 author: Aaron Ti
 date:   2020-02-02
 category: Programming
-keywords: DVWA-ELK
 abstract: Kibana Logging for Dockerised DVWA (Damn Vulnerable Web Application) Stack
 website: https://github.com/mcdulltii/dvwa-elk
 ---

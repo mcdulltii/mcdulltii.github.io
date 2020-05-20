@@ -4,7 +4,6 @@ title:  "ShiftCalendar"
 author: Aaron Ti
 date:   2020-02-27
 category: Programming
-keywords: ShiftCalendar
 abstract: 3-Day Shift Calendar with SDL2 in Nim. Uses SDL2 to Visualize the Calendar in a Window
 website: https://github.com/mcdulltii/ShiftCalendar
 ---

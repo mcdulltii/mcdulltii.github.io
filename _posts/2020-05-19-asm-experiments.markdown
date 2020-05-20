@@ -4,7 +4,6 @@ title:  "ASM-Experiments"
 author: Aaron Ti
 date:   2020-05-19
 category: Exploits
-keywords: Windows ASM Shellcode Exploit
 abstract: Experiments with ASM Shellcodes in C++. Contains Exploits on Shellcode Generation and Loading of Functions within the Kernel and DLLs
 website: https://github.com/mcdulltii/asm-experiments
 ---
