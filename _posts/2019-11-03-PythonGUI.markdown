@@ -32,7 +32,10 @@ However if the `server.py` is run via the command line, additional modules will 
 
 ## Running the Application 
 ### Starting the GUI
-1. Run `<file path to PythonGUI>/PythonGUI/windows_exe.exe`
+1. Run
+   ```
+   <file path to PythonGUI>/PythonGUI/windows_exe.exe
+   ```
    
    or
    
