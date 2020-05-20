@@ -8,11 +8,11 @@ abstract: Arduino Script Generation Using Python for TinyCircuits
 website: https://github.com/mcdulltii/TinyScreen
 ---
 
-![PNG to INO](https://github.com/mcdulltii/TinyScreen/blob/master/png/png.gif)
+![PNG to INO](https://raw.githubusercontent.com/mcdulltii/TinyScreen/master/png/png.gif)
 
-![GIF to INO](https://github.com/mcdulltii/TinyScreen/blob/master/png/gif.gif)
+![GIF to INO](https://raw.githubusercontent.com/mcdulltii/TinyScreen/master/png/gif.gif)
 
-![MP4 to INO](https://github.com/mcdulltii/TinyScreen/blob/master/png/mp4.gif)
+![MP4 to INO](https://raw.githubusercontent.com/mcdulltii/TinyScreen/master/png/mp4.gif)
 
 ## Instructions
 
