@@ -317,12 +317,16 @@ code {
   background: rgba(0,0,0,0);
   border: 1px solid #E1E1E1;
   border-radius: 4px;
-  overflow: scroll; }
+  overflow: scroll;
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  scrollbar-width: none;  /* Firefox */ }
 pre > code {
   display: block;
   padding: 1rem 1.5rem;
   white-space: pre; }
-
+code::-webkit-scrollbar {
+  display: none;
+}
 
 /* Tables
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
