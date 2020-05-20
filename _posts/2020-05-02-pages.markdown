@@ -9,7 +9,7 @@ abstract: Image renders & animations I've made over the years. Photoshop-free Im
 website: https://github.com/mcdulltii/pages
 ---
 
-![C4D Image Renders](https://github.com/mcdulltii/pages/blob/gh-pages/Photos/grass4.png)
+![Renders]({{ site.baseurl }}/assets/img/grass.png)
 
 # Renders
 

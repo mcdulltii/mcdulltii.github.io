@@ -9,7 +9,7 @@ abstract: 3-Day Shift Calendar with SDL2 in Nim. Uses SDL2 to Visualize the Cale
 website: https://github.com/mcdulltii/ShiftCalendar
 ---
 
-![Running Binary File](Calendar.png)
+![Calendar](https://raw.githubusercontent.com/mcdulltii/ShiftCalendar/master/Calendar.png)
 
 ## Building
 
