@@ -65,7 +65,7 @@
   .three.columns                  { width: 22%;            }
   .four.columns                   { width: 30.6666666667%; }
   .five.columns                   { width: 39.3333333333%; }
-  .six.columns                    { width: 48%;            }
+  .six.columns                    { width: 48%;            padding: 1em;}
   .seven.columns                  { width: 56.6666666667%; }
   .eight.columns                  { width: 65.3333333333%; }
   .nine.columns                   { width: 74.0%;          }
@@ -155,10 +155,10 @@ p {
 /* Links
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 a {
-  color: #2f2f2f; }
+  color: rgb(240,240,240); }
 a:hover {
-  color: #000;
-  text-shadow: 3px 3px 1px rgba(47,47,47,0.2);}
+  color: rgb(210,210,210);
+  text-shadow: 3px 3px 1px rgba(180,180,180,0.2);}
 
 
 /* Buttons
@@ -171,7 +171,7 @@ input[type="button"] {
   display: inline-block;
   height: 38px;
   padding: 0 30px;
-  color: #555;
+  color: rgb(200,200,200);
   text-align: center;
   font-size: 11px;
   font-weight: 600;
@@ -195,7 +195,7 @@ button:focus,
 input[type="submit"]:focus,
 input[type="reset"]:focus,
 input[type="button"]:focus {
-  color: #333;
+  color: rgb(200,200,200);
   border-color: #888;
   outline: 0; }
 .button.button-primary,

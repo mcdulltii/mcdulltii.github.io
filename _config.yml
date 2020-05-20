@@ -13,38 +13,29 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: L'Ami du peuple
-email: jcoenep@hotmail.com
+title: Portfolio
+email: mcdulltii@gmail.com
 description: >
-  Journal politique impartial, <br>
-  Par Mr. P. Marat auteur de l'Offrande a la patrie, <br>
-  du Moniteur et du Plan de Constitution, etc.
-tagline: vitam impendere vero
-location: Versailles
+  Computing Projects, Exploitations and more!
+tagline: An OSCP, Programming enthusiast that does image synthesis on the side.
+location: Singapore
 date: true
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://johncoene.github.io" # the base hostname & protocol for your site, e.g. http://example.com
-author: Jean-Paul Marat
-google_analytics: UA-101394056-1
+baseurl: "" # the subpath of your site
+url: "http://mcdulltii.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+author: Aaron Ti
+google_analytics: UA-125435831-1
 
 # SEO
-twitter:
-  username: jdatap
-
 logo: /assets/logo.png
 
-lang: fr
-
-facebook:
- app_id: 101766790448070
+lang: en
 
 social:
-  name: John Coene
+  name: Aaron Ti
   links:
-    - https://twitter.com/jdatap
-    - https://www.linkedin.com/in/johncoene
-    - https://plus.google.com/109009224717674019651
-    - https://github.com/JohnCoene
+    - https://github.com/mcdulltii
+    - https://github.com/mcdullti
+    - https://instagram.com/aaronti_
 
 # Build settings
 exclude: README.md
