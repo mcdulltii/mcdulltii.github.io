@@ -140,7 +140,7 @@ list-style-type: none;
 padding-right: 20px;
 }
 
-img[alt=Renders], img[alt=PSMalware], img[alt=Calendar]
+img[alt=Renders], img[alt=PSMalware], img[alt=Calendar], img[alt=Objdump], img[alt="Corrupted header"]
 {
 width:100%;
 }
