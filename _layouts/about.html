@@ -16,7 +16,7 @@
       <p class="right">{{ site.tagline }}</p>
       <div class="center">
         <h5>{{ page.description }}</h5>
-        {% if site.date == true %}<h5>{{ site.time | date_to_long_string | upcase }}</h5>{% endif %}
+        {% if site.date == true %}<h5>Updated since <i>{{ site.time | date_to_long_string | upcase }}</i></h5>{% endif %}
         <br>
       </div>
 
