@@ -66,7 +66,7 @@
   .three.columns                  { width: 22%;            padding: 1em;}
   .four.columns                   { width: 30.6666666667%; padding: 1em;}
   .five.columns                   { width: 39.3333333333%; padding: 1em;}
-  .six.columns                    { width: 48%;            padding: 1em;}
+  .six.columns                    { width: 48%; height: 10em; padding: 1em;}
   .seven.columns                  { width: 56.6666666667%; padding: 1em;}
   .eight.columns                  { width: 65.3333333333%; padding: 1em;}
   .nine.columns                   { width: 74.0%;          padding: 1em;}
