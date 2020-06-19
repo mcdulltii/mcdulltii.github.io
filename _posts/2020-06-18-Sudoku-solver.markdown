@@ -48,9 +48,28 @@ src/sudoku
 <Answer outputted>
 ```
 
+- Calculate runtime of Sudoku solve by `make timed`
+
+```shell
+> make timed
+    .
+    .
+    .
+Enter input mode: [1]File, [2]Stdin:
+1
+Enter file location:
+src/sudoku
+
+<Answer outputted>
+
+Elapsed time: {Time taken to solve puzzle}ms
+```
+
 ## Makefile
 
 - `make` or `make compile` to run the binary executable
+
+- `make timed` to run the binary executable with a solve timer
 
 - `make build` to only build the binary executable in ./target/ directory
 
@@ -61,7 +80,7 @@ src/sudoku
 ## References
 
 - Wikipedia
-  
+
   - Optimized Sudoku solving algorithms
 
 - Backtracing algorithm
