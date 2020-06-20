@@ -149,7 +149,7 @@ hr.simple {
 
 .repo-link {
   display: block;
-  width: 450px;
+  width: 45rem;
   margin: auto;
 }
 
@@ -182,5 +182,8 @@ and (min-device-width : 768px)  {
   .tag{
     width: 23%;
     margin-right:0;
+  }
+  .repo-link {
+    width: 30rem;
   }
 }
