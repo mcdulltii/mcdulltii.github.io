@@ -6,7 +6,7 @@ permalink: /about/
 
 # 2020
 
-- Learn Python, C, C++, Nim, Golang, Assembly, Web Frameworks, Unity and even more!
+- Learn Python, C, C++, Nim, Rust, Golang, Assembly, Web Frameworks, Unity and even more!
 - Serving in Singapore Armed Forces as part of the Cyber Defence Group
 - Experimented with and created multi-platform binary exploits and malwares
 - Expanded on computer renderings with realistic 3D models and textures, including animations and motion tracking

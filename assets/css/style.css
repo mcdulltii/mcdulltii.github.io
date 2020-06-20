@@ -142,8 +142,9 @@ hr.simple {
 .repo-card {
   display: block;
   margin: auto;
-  max-width: 600px;
+  max-width: 450px;
   margin-bottom: 3rem;
+  border-radius: 10px;
 }
 
 #navlist li
