@@ -24,7 +24,7 @@
         <hr/>
         <p class="right tagline">{{ page.category }}</p>
         {% endif %}
-        <h3 class="center space"><a href={{ page.website }} target="_blank">Source Code</a></h3>
+        <a class="repo-card" href="{{ page.website }}" target="_blank"><img src="https://gh-card.dev/repos/{{ page.website | remove:'https://github.com/' }}.svg"></a>
         <h5 class="center">{{ page.date | date_to_long_string | upcase }}</h5>
         <hr/>
         <br/>
