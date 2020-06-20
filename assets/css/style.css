@@ -139,13 +139,6 @@ hr.simple {
   border-radius: 8px;
 }
 
-.repo-card {
-  margin: auto; 
-  max-width: 405px; 
-  margin-top: 3rem; 
-  margin-bottom: 3rem;
-}
-
 #navlist li
 {
 display: inline;

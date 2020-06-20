@@ -3,7 +3,6 @@
   <head>
     <meta charset="utf-8">
     <title>{{ page.title }}</title>
-    <script src="{{ site.baseurl }}/assets/js/repo-card.js"></script>
     {% include header.html %}
   </head>
   <body>
@@ -25,7 +24,7 @@
         <hr/>
         <p class="right tagline">{{ page.category }}</p>
         {% endif %}
-        <div class="repo-card" data-repo="{{ page.website | remove:'https://github.com/'}}"></div>
+        <h3 class="center space"><a href={{ page.website }} target="_blank">Source Code</a></h3>
         <h5 class="center">{{ page.date | date_to_long_string | upcase }}</h5>
         <hr/>
         <br/>
