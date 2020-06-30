@@ -38,6 +38,12 @@ website: https://github.com/mcdulltii/C-experiments
 - Uses truncated input as key, for decoding of flag
 - Anti-debugging from corrupted header and invalid executable entry point e_entry
 
+### - Reboot (c)
+
+- Logistic differential equation to "predict" randomized canary values
+- 34 byte overflow vulnerable shellcode array stored as reboot shellcode
+- Buffer overflow for canary, egghunter shellcode and XOR exploit decoding
+
 ## Extras
 
 ### - Screwed (c)
