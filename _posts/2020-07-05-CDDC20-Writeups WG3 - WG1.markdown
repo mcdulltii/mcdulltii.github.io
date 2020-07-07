@@ -7,7 +7,7 @@ category: CTF Writeups
 abstract: CDDC20 Writeups WG3 - WG1. Consists of blood, sweat and tears from overguessing
 ---
 
-# Sitemap
+## Sitemap
 
 ##### [Clickity Clack](#wg-3-1)
 ##### [My Favourite Music](#wg-3-2)
@@ -949,7 +949,7 @@ Since the equation of the curve given has an order equal to the prime number use
 
 As this solution did not use the provided partially decrypted png file, the solution can be further optimized to run the brute force algorithm more efficiently
 
-Flag: `CDDC20{maS5_brA1nwashINg_anD_w0rLD_dOMINA7ioN}
+Flag: `CDDC20{maS5_brA1nwashINg_anD_w0rLD_dOMINA7ioN}`
 
 ---
 
