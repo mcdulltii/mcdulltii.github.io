@@ -168,6 +168,10 @@ img
   width:75%;
 }
 
+p > code {
+  display: block;
+}
+
 @media only screen
 and (min-device-width : 768px)  {
   .threecol {
@@ -185,5 +189,8 @@ and (min-device-width : 768px)  {
   }
   .repo-link {
     width: 45rem;
+  }
+  p > code {
+    display: initial;
   }
 }

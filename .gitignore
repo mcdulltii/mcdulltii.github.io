@@ -1,3 +1,5 @@
 _site
 .sass-cache
 .jekyll-metadata
+assets/img/CDDC20/Files/*
+!assets/img/CDDC20/Files/*.png
