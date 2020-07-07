@@ -48,7 +48,7 @@ Flag: `CDDC20{HERETURNS}`
 
 ![crypto-3]({{ site.baseurl }}/assets/img/CDDC20/Crypto-3.png)
 
-![dancing men]({{ site.baseurl }}/assets/img/CDDC20/files/Crypto-3.png)
+![dancing men]({{ site.baseurl }}/assets/img/CDDC20/Files/Crypto-3.png)
 
 Use Dancing Men Cipher (https://www.dcode.fr/dancing-men-cipher)
 
@@ -60,7 +60,7 @@ Flag: `CDDC20{WELOVETODANCEANDCODEALLDAYLONG}`
 
 ![forensics-1]({{ site.baseurl }}/assets/img/CDDC20/Forensics-1.png)
 
-<!-- ![flipped]({{ site.baseurl }}/assets/img/CDDC20/files/Forensics-1.jpg) -->
+<!-- ![flipped]({{ site.baseurl }}/assets/img/CDDC20/Files/Forensics-1.jpg) -->
 
 When viewing the comments, it gives `02CDDC{yhp4rg07ohp_5i_EmOs3wa}` in XPComments field
 
@@ -147,7 +147,7 @@ Flag: `CDDC20{NiCe-2-MeeT-py2exe~:D}`
 
 ![RE-2]({{ site.baseurl }}/assets/img/CDDC20/RE-2.png)
 
-![flag bitmap]({{ site.baseurl }}/assets/img/CDDC20/files/RE-2.png)
+![flag bitmap]({{ site.baseurl }}/assets/img/CDDC20/Files/RE-2.png)
 
 Use CFF Explorer -> resource editor -> bitmaps -> "FLAG"
 
@@ -159,11 +159,11 @@ Flag: `CDDC20{UR-di$$ector}`
 
 ![RE-3]({{ site.baseurl }}/assets/img/CDDC20/RE-3.png)
 
-![strings]({{ site.baseurl }}/assets/img/CDDC20/files/RE-3-1.png)
+![strings]({{ site.baseurl }}/assets/img/CDDC20/Files/RE-3-1.png)
 
 .data section of the binary contained a weird string
 
-![disassembly]({{ site.baseurl }}/assets/img/CDDC20/files/RE-3-2.png)
+![disassembly]({{ site.baseurl }}/assets/img/CDDC20/Files/RE-3-2.png)
 
 Disassembly shows the binary xref the weird string and adds each byte with 0x6, giving the flag
 
@@ -231,7 +231,7 @@ Flag: `CDDC20{_ItI_sN3_ver_Too_Lat_eT0_Ask_Wha_tT1_me1_tI5_!!}`
 
 ![secret code]({{ site.baseurl }}/assets/img/CDDC20/Secret_code.png)
 
-![rewrite]({{ site.baseurl }}/assets/img/CDDC20/files/SecretCode.png)
+![rewrite]({{ site.baseurl }}/assets/img/CDDC20/Files/SecretCode.png)
 
 Rewrite asm jmp instruction at 0x79d `jne 0x7b0` to `je 0x7b0` to bypass the eax cmp, to step into the first sym.check and print flag immediately
 
@@ -285,7 +285,7 @@ Flag: `CDDC20{Ev1dence_H1dden_Between_0&1}`
 
 SuspiciousSvc file is a corrupted ELF binary, which can't be reversed by Ghidra
 
-![idapro]({{ site.baseurl }}/assets/img/CDDC20/files/SuspiciousSvc.png)
+![idapro]({{ site.baseurl }}/assets/img/CDDC20/Files/SuspiciousSvc.png)
 
 When disassembled using IDApro, the stack is shown to be shifted by 0x104 for our STDIN
 
@@ -307,7 +307,7 @@ HACKER.3y3 is a UPX packed Windows executable
 
 After unpacking the executable with `upx -d HACKER.3y3`, the strings of the executable shows that its a C++ Windows application which opens and draws lines on a canvas window
 
-![canvas]({{ site.baseurl }}/assets/img/CDDC20/files/HACKER-1.png)
+![canvas]({{ site.baseurl }}/assets/img/CDDC20/Files/HACKER-1.png)
 
 By opening the application, the window shows seemingly random lines drawn. After reversing the executable, there are actually lines drawn with a NULL brush
 
@@ -325,6 +325,6 @@ HEX Locations of NULL brush:
 1395
 ```
 
-![fixed canvas]({{ site.baseurl }}/assets/img/CDDC20/files/HACKER-2.png)
+![fixed canvas]({{ site.baseurl }}/assets/img/CDDC20/Files/HACKER-2.png)
 
 Flag: `CDDC20{HI-NULL^_^!}`
