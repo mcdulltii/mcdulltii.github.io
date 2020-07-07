@@ -11,6 +11,7 @@ permalink: /about/
 - Experimented with and created multi-platform binary exploits and malwares
 - Expanded on computer renderings with realistic 3D models and textures, including animations and motion tracking
 - Started on OSCP and CTF competitions
+    - Achieved 1st runner-up in CDDC 2020
 
 # 2018 - 2019
 
