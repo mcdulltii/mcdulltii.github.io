@@ -496,16 +496,12 @@ As the sequence of numbers, have `.` and `:`, the title misdirected us towards t
 Instead, `. and :` are `A and B` respectively representing the 11th and 12th characters for base12 encoding, where when converted to ASCII, will obtain the flag
 
 ```python
-intStr(int('CDDC20{BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB}'.encode('hex'),16),base=12)
-
-Original:
-'6241883642903BAB50773466B6363B533215606AB008680946B6A567402299A46A19B71AA510A19094173308AB106B5052AA9A13099632AA675311'
-
-Change intStr encoding:
 '6347880643.209:9567.97362:37635790362021060442:9:8.47173013.100143699:3:0488637.4578918689614:421.888606155:667.7837.7'
 ```
 
-Flag: `CDDC20{BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB}`
+(Writeup was wrong gonna edit ltr)
+
+Flag: `Didnt decode this yet`
 
 ---
 
