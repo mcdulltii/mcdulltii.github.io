@@ -903,119 +903,122 @@ pt = stream.decryption(ct)
 print("pt:",pt)
 ```
 
-The code provided gives equations with an Elliptical Curve as an object, using arithmetic on elliptic curves. Thus we use ECDSA in Python (https://github.com/qubd/mini_ecdsa)
+We used [ECDSA](https://github.com/qubd/mini_ecdsa) in Python, [scryptoslib](https://github.com/scryptos/scryptoslib), and [ecpy](https://github.com/elliptic-shiho/ecpy)
 
-```python
-exec(open("./mini_ecdsa.py").read())
-```
+There are two points `Q` and `P` defined on a Elliptic Curve `E`. From a seed `s`, it computes `r = sQ` and a new seed `sP` to be used in the next iteration. The sequence of `r`s generated are used to encrypt the plaintext by bit-wise xoring. However, each time only the `30 * 8` LSB of `r` are used to decrypt a 30 byte chunk of plaintext each time. `partial_plaintext.txt` hence contain plaintext of the 7th chunk and the first 3 bytes of the 8th chunk
 
-We also used scryptoslib from (https://github.com/scryptos/scryptoslib), and ecpy from (https://github.com/elliptic-shiho/ecpy)
+We can recover `r` from `partial_plaintext.txt` with ease simply by bit-wise xoring. However, there are 16 bits of `r` that seem to be lost during the encryption process. Fortunately `2**16 = 65536` is a pretty small number to bruteforce so we can recover the whole `r` no problem
 
-```python
-import sys
-sys.path.append(r'.\scryptoslib')
-from scryptos import *
-from ecpy import *
-```
-
-From the code provided, initialize the constant variables in our script
+Recovering `s` via `r = sQ` is a little more challenging. In a proper implementation this would be impossible except via bruteforce due to the [Discrete Logarithm Problem](https://en.wikipedia.org/wiki/Elliptic-curve_cryptography). This turns out to be impractical with this challenge (I tried). However, in the event that the order of the curve is equal to the order of the finite field, i.e. equal to the prime used in `code.py`, there is something called the [Smart's Attack](https://wstein.org/edu/2010/414/projects/novotney.pdf) that enables recovering of `s` from `r = sQ` in linear time. An implementation of Smart's Attack can be found in the Python library [ecpy](https://github.com/elliptic-shiho/ecpy)
 
 ```python
 p = 112817876910624391112586233842848268584935393852332056135638763933471640076719
 A = 49606376303929463253586154769489869489108883753251757521607397128446713725753
 B = 79746959374671415610195463996521688925529471350164217787900499181173830926217
 P = 112817876910624391112586233842848268584935393852332056135638763933471640076719
-Px = 103039657693294116462834651854367833897272806854412839639851017006923575559024 #P
+Px = 103039657693294116462834651854367833897272806854412839639851017006923575559024
 Py = 77619251402197618012332577948300478225863306465872072566919796455982120391100
-Qx = 54754931428196528902595765731417656438047316294230479980073352787194748472682 #Q
+Qx = 54754931428196528902595765731417656438047316294230479980073352787194748472682
 Qy = 31061354882773147087028928252065932953521048346447896605357202055562579555845
 F = FiniteField(p)
 E = EllipticCurve(F, A, B)
 Q = E(Qx, Qy)
 P = E(Px, Py)
 e = SSSA_Attack(F, E, Q, P)
-print ("[+] e = %d" % e)
 assert Q * e == P
-```
-```
-OUT:
-[+] e = 72529124805871229360171330254593943220566431521453438361067644203504289580075
+print ("[+] e = %d" % e)
+
+# >>> [+] e = 72529124805871229360171330254593943220566431521453438361067644203504289580075
 ```
 
-Initialize the given encoded string and partially-decoded strings in our script
+Now, we can directly apply Smart's Attack to recover `s`. However, remember that we have to bruteforce a maximum of 65536 different `r`. It proves to be slow to apply Smart's Attack that many time. We can get around this by computing a value `e` where `eQ = P`, which requires one application of Smart's Attack, and then `s'` for the next iteration can simply be calculated as `s' = sP = s * eQ = e * sQ = e * r`. We can then use this new `s'` to decrypt the first 3 bytes of the 8th chunk and compare it with that in `partial_plaintext.txt`
 
 ```python
-enc = 'a77f62794bbce365da53c79d32e4f43a49b63831d6b438a4ee2cfd77ac9b87abcd73d52c1ea4673ed3b390eff9da35aedcb7dd714f00beadecfc0c5ec89dc8e3362f7cda409fcf76cb6a4a1d109770ee8820635754b4a2395fd57da22dc5ac5803bcf1495d84baf9d009b7571500248874d6d88e79bdda42cf74957834379144a16e5af79fbc94cb183c617eb054d7863a485aced7c488a4b3693bcafe184b4355239ff4c47ddb492839584ff6a9d9424d52805d2bcfa20f46d64504ca4e485e32b35e560f146459baa29a58347b9da8abd55bffa5be154e45d268e8bb6bec7f0b30def46649808b5471245e4390d2490e8a4f339b381c091b80da3db2f77a780118d3511dae7a6be26a075294881c803fe7503335bde61c0ab711f7e148641ad110daec2dcc711168da435a01ed763db5dae638a82ac44f65354fec4d37949bbdf0631a372baa19edc02758282022105fcc002be7602aabf01d2357230d372252fc78d68b7b5f9309a914c7d34ad7e25fb0f7c8d86c8629ec36e0363309c33d40615f770cc32fd370a0c0c329dbbb11a17d26f67101a8e352548fb9b1a2db0956ae3aa7200a9748a97f003913bcf3198eb515c91d3774750616c8c5087c10751f54f988d235822259d4dce88a5ec59137e6842651180fcadad11e9957c604f0099f8590b7437d7f1985a966b57302ac58253bdbf1a10d3d988c6019'
-ct = bytearray([int(enc[2*i:2*i+2], 16) for i in range(len(enc)//2)])[210:]
+enc = open('Challenge Files/enc.txt', 'r').read()
+ct = bytearray([int(enc[2*i:2*i+2], 16) for i in range(len(enc)//2)])[210:] # Get bytearray from enc with offset 210
 pt = b'been done and we are seeing extre'
 
 pt30 = pt[:30]
 ct30 = ct[:30]
-r = [x^y for x,y in zip(pt30, ct30)]
-```
+r30 = [x^y for x,y in zip(pt30, ct30)]
 
-Create generator function to retrieve the roots of the Elliptical Curve
-
-```python
-E = EllipticCurve(F, A, B)
-def get_r(ec, pt30, ct30):
-    r = [x^y for x,y in zip(pt30, ct30)]
-    message = r
-    m = int(message[0])
-    for c in message[1:]:
+def get_r(pt30, ct30, r30):
+    'Generates all possible values of r'
+    m = int(r30[0])
+    for c in r30[1:]:
         m *= 256
         m += c
-      
-    num = m
+    x = m
     i = 0
     while True:
         i += 1
-        num += 2**(30*8)
-        y = E.get_corresponding_y(num)
-        if y and ec.isOn(Point(num, y)):
-            yield i, Point(num, y)
-```
+        x += 2**(30*8) #* 60359
+        y = E.get_corresponding_y(x)
+        if y:
+            yield i, E(x,y)
 
-Brute force to find a solution for the decrypted strings
-
-```python
-for i, r in get_r(ec, pt30, ct30):
+for i, r in get_r(pt30, ct30, r30):
     print(i, end='\r')
-    s2 = ec.smul(r, e).x
-    r2 = ec.smul(Q, s2).x & (2**(30*8) - 1)
-    pttt = []
+    s2 = (e * r).x.x
+    r2 = (Q * s2).x.x & (2**(30*8) - 1)
+    pt_dec = []
     for j in range(1,4):
-        pttt += bytearray([((r2>>((30-j)*8))&0xff)^ct[30*1+j-1]])
-    
-    if ''.join([chr(i) for i in pttt]) in pt.decode('utf-8'):
-        print(i, ''.join([chr(i) for i in pttt]))
-        print(r)
+        pt_dec += bytearray([((r2>>((30-j)*8))&0xff)^ct[30*1+j-1]])
+    pt_dec = bytes(pt_dec)
+    if pt_dec == pt[30:]:
         break
+
+# >>> 60359
 ```
 
-```
-OUT:
-1 tre
-Point(x=106645519554637665222398816163553318788013356301622952176515486421666461955889, y=108597857152265659259615490558781219316989529517007317034067131888570082619615)
-```
-
-Use provided function to read the deciphered stream using our results
+Alright! So we've found both `r` and `s'`! We can simply feed `s'` as a seed into the decryption function in `code.py` to decrypt everything from the 9th chunk onwards!
 
 ```python
-s = STREAM(ec, s2, P, Q)
-s.decryption(ct[60:])
+from code import *
+
+ec = EC(A,B,p)
+P0 = Point(Px, Py)
+Q0 = Point(Qx, Qy)
+
+s = STREAM(ec, s2, P0, Q0)
+print(s.decryption(ct[60:]).decode('utf-8'))
+
+# up to 98%. We are ready to inject this odourless, colourless and tasteless liquid into all our water pumps. Prepare yourselves for CDDC20{maS5_brA1nwashINg_anD_w0rLD_dOMINA7ioN}!! HAHAHAHAHHAAAAA cheers to the success of our evil planz!!!
 ```
 
+Though we have obtained the flag, we can still decrypt it even more
+
+If we apply Smart's Attack 9 more times, we can recover the original seed. However, at every iteration, there are two solutions for `s`, namely `s` and `p-s`, where `p` is the modulo of the finite field, which isn't a problem, just bruteforce all solutions
+
+```python
+s1 = s2
+s1 =     SSSA_Attack(F, E, P, E(s1, E.get_corresponding_y(s1)))
+s1 =     SSSA_Attack(F, E, P, E(s1, E.get_corresponding_y(s1)))
+s1 = p - SSSA_Attack(F, E, P, E(s1, E.get_corresponding_y(s1)))
+s1 =     SSSA_Attack(F, E, P, E(s1, E.get_corresponding_y(s1)))
+s1 = p - SSSA_Attack(F, E, P, E(s1, E.get_corresponding_y(s1)))
+s1 = p - SSSA_Attack(F, E, P, E(s1, E.get_corresponding_y(s1)))
+s1 = p - SSSA_Attack(F, E, P, E(s1, E.get_corresponding_y(s1)))
+s1 = p - SSSA_Attack(F, E, P, E(s1, E.get_corresponding_y(s1)))
+s1 = p - SSSA_Attack(F, E, P, E(s1, E.get_corresponding_y(s1)))
+
+ct = bytearray([int(enc[2*i:2*i+2], 16) for i in range(len(enc)//2)])
+
+s = STREAM(ec, s1, P0, Q0)
+print(s.decryption(ct).decode('utf-8'))
+
+# >>> Greetingzz, my fellow comrades from Unduplicitous Corp. Our researchers have made tremendous progress with Brainwashing Agent 2.0 - it is now alot more effective than the previous version. Thorough testing has been done and we are seeing extremely high success rates of up to 98%. We are ready to inject this odourless, colourless and tasteless liquid into all our water pumps. Prepare yourselves for CDDC20{maS5_brA1nwashINg_anD_w0rLD_dOMINA7ioN}!! HAHAHAHAHHAAAAA cheers to the success of our evil planz!!!
+
+print('Possible seed used:')
+print('\tdec: %d'%(s1))
+print('\thex: %s'%hex(s1)[2:])
+
+# >>> Possible seed used:
+# >>>	dec: 151386116941948313024325411690796683746
+# >>>	hex: 71e3e7d3fac11617c282d57c4ab211e2
 ```
-OUT:
-bytearray(b'up to 98%. We are ready to inject this odourless, colourless and tasteless liquid into all our water pumps. Prepare yourselves for CDDC20{maS5_brA1nwashINg_anD_w0rLD_dOMINA7ioN}!! HAHAHAHAHHAAAAA cheers to the success of our evil planz!!!')
-```
 
-What is used is a linear algorithm for solving the discrete logarithm problem on elliptic curves of trace one, by eliminating all curves whose group orders are equal to the order of the finite field.
-
-Since the equation of the curve given has an order equal to the prime number used in the additive group (Anomalous curve), ECDLP can be solved in linear time. By brute forcing only the last 16bits of the seed, we are able to obtain the key for the elliptic curve
-
-As this solution did not use the provided partially decrypted png file, the solution can be further optimized to run the brute force algorithm more efficiently
+#### Referenced from [Julian's writeup](https://github.com/JuliaPoo/Collection-of-CTF-Writeups/tree/master/CDDC2020/A%20Kind%20of%20Crypto)
 
 Flag: `CDDC20{maS5_brA1nwashINg_anD_w0rLD_dOMINA7ioN}`
 
