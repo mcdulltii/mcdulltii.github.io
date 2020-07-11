@@ -551,17 +551,84 @@ Flag: `I forgot what was the flag`
 
 ![encryptsvc2]({{ site.baseurl }}/assets/img/CDDC20/EncryptSvc2.png)
 
-The file provided is an ELF binary, where our inputs are used to decipher the flag remotely
+The file provided is an ELF binary, where our inputs are used to decipher a flag remotely
 
 Running the binary prints out a service menu, where our input is parsed to choose whether we show example, encrypting a message, decrypting a message, show the public key, or quit
 
-![menu]({{ site.baseurl }}/assets/img/CDDC20/Files/EncryptSvc2.png)
+![menu]({{ site.baseurl }}/assets/img/CDDC20/Files/EncryptSvc2-1.png)
 
-After trying out the edge cases to this first input parsing, it is found to work on inputting `7`, instead of the required range `1 to 5`
+After trying out the edge cases to this first input parsing, it is found to work on inputting `7` twice, instead of the required range `1 to 5`
 
-(Will add on to this ltr)
+When the binary encrypts the message after inputting `7` twice, the encrypted text is changed as shown below 
 
-As such, we are able to obtain the flag using common modulus attack
+![select]({{ site.baseurl }}/assets/img/CDDC20/Files/EncryptSvc2-2.png)
+
+After reversing the binary further, the change in message encryption was due to the change in exponent used in its RSA encryption
+
+```C
+do {
+    inputOption = getInput();
+    switch(inputOption) {
+    default:
+        puts("Please select 1-5 \n");
+        break;
+    case 1:
+        encFlagSize = encryptPublic(flagBuffer,0x80,publicPemBuffer,encDestBuffer);
+        if (encFlagSize == 0xffffffff) {
+        FUN_001014ca("[-] Public Encrypt failed ");
+                    /* WARNING: Subroutine does not return */
+        exit(-1);
+        }
+        puts("[Encrypted message example] ----------------------------------------|");
+        printf("[+] Encrypted length : %d\n",(ulong)encFlagSize);
+        b64EncodedCiphertext = (void *)b64encode(encDestBuffer,(ulong)encFlagSize,(ulong)encFlagSize);
+        printf("[+] Encrypted Text : \n%s",b64EncodedCiphertext);
+        free(b64EncodedCiphertext);
+        puts("\n--------------------------------------------------------------------|\n");
+        break;
+    case 2:
+        ...
+    case 3:
+        ...
+    case 4:
+        ...
+    case 5:
+        ...
+    case 7:
+        FUN_00101627((ulong)inputOption);
+    }
+} while( true );
+
+void FUN_00101627(int param_1)
+{
+  ***(long ***)(g_RSAPublicBio + 0x28) = (long)param_1;
+  return;
+}
+```
+
+The initial encrypted message is encrypted using an exponent of 65537, while inputting `7` twice will change this exponent to 7
+
+As `gcd(65537, 7) == 1`, we can use the common modulus attack to decrypt the flag
+
+```
+Initial encrypted message:
+mXKqtThcqYFxcx1FeDBtgsjfkeBdMN3VV4GUHH5lXCWsMDjLPlZXhV/N28InCiLd
+EfN6G5QZ+HjEJ2PBevygDnV9tTeL5F3izvyowatLpfIHRvmjSZwbHiq/dHdkm3A4
+rFcIAuKfsIoTMkuCwt9JdPNWVbIPRe+vbZRnDnUnX1g=
+
+Encrypted message after inputting 7 twice:
+0rGwj2Wcg5qpQ5+p6d1QJPpgbYCxgHqmgd/BZOfjP4k2uifOPzsvWGnBezH1f/Hl
+4q7eb9g6ZU8ISEE/oNkitkTRp78I7I5oKZpk3cLgIJP2kLRH9OPdH+H+4BG7bcv1
+Iuiw/1h5V0OY3QQPG1Ud4IIHU/Jk0M109+Po42QIZmw=
+
+(These two outputs are not from the actual flag)
+```
+
+There exists some `s1` and `s2`, where `e1 . s1 + e2 . s2 == 1`
+
+![stackoverflow]({{ site.baseurl }}/assets/img/CDDC20/Files/EncryptSvc2-3.png)
+
+As shown above, by solving for `65537 . s1 + 7 . s2 = 1`, we can obtain the flag by multiplying the ciphertexts with their respective exponents
 
 Flag: `CDDC20{RSA_and_euclidean_fun}`
 
