@@ -4,4 +4,4 @@ title: List
 permalink: /list/
 ---
 
-Compiled vertical list of projects
+Compiled list of projects

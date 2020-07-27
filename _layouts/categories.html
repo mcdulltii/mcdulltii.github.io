@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{ site.title }}</title>
+    {% include header.html %}
+  </head>
+  <body>
+
+    {% include nav.html %}
+
+    <div class="container">
+      {% assign rawtags = "" %}
+      {% for post in site.posts %}
+          {% assign ttags = post.category | join:'|' | append:'|' %}
+          {% assign rawtags = rawtags | append:ttags %}
+      {% endfor %}
+      {% assign rawtags = rawtags | split:'|' | sort %}
+      
+      {% assign tags = "" %}
+      {% for tag in rawtags %}
+          {% if tag != "" %}
+              {% if tags == "" %}
+                  {% assign tags = tag | split:'|' %}
+              {% endif %}
+              {% unless tags contains tag %}
+                  {% assign tags = tags | join:'|' | append:'|' | append:tag | split:'|' %}
+              {% endunless %}
+          {% endif %}
+      {% endfor %}
+      <div class="anchor">
+        <h3>Categories:</h3>
+        {% for tag in tags %}
+          <a class="small tag" href="#{{ tag | slugify }}"> {{ tag }} </a>
+        {% endfor %}
+      </div>
+      {% for tag in tags %}
+      <br/>
+      <div class="rows">
+        <a class="categories" name="{{ tag | slugify }}"> {{ tag }} </a>
+        <ul>
+          {% for post in site.posts %}
+            {% if post.category contains tag %}
+            <li>
+            <h5>
+            <a href="{{ post.website }}">
+            {{ post.title }}
+            </a>
+            <small>&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;{{ post.date | date_to_string }}</small>
+            </h5>
+            </li>
+            {% endif %}
+          {% endfor %}
+          </ul>
+      </div>
+      {% endfor %}
+    </div>
+
+    {% include foot.html %}
+
+  </body>
+</html>

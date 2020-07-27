@@ -3,6 +3,7 @@
     <li {% if page.url == "/" %}class="active"{% endif %}><a href="{{ site.baseurl }}/">Home</a></li>
     <li {% if page.url == "/about/" %}class="active"{% endif %}><a href="{{ site.baseurl }}/about/">About</a></li>
     <li {% if page.url == "/list/" %}class="active"{% endif %}><a href="{{ site.baseurl }}/list/">List</a></li>
+    <li {% if page.url == "/categories/" %}class="active"{% endif %}><a href="{{ site.baseurl }}/categories/">Categories</a></li>
     <li style="border-left: 3px solid white; height: 10px;"></li>
     {% for nav in site.data.nav.social %}
     {% if nav.title == "Renders" %}

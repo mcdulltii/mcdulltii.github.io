@@ -204,6 +204,22 @@ a.tooltip:hover > .tooltiptext {
   font-size: 1.8em;
 }
 
+.categories {
+  font-size: 3em;
+  text-decoration: none;
+  border-top: 2px solid white;
+  padding-top: 5px;
+}
+
+.tag {
+  display: block;
+}
+
+.anchor {
+  margin-top: 10px;
+  margin-bottom: 40px;
+}
+
 @media only screen
 and (min-device-width : 768px)  {
   .threecol {
