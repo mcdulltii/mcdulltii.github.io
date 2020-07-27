@@ -14,12 +14,7 @@
       <h5 class="center">{{ site.description | markdownify }}</h5>
       <hr/>
       <p class="right tagline">{{ site.tagline }}</p>
-      <div class="center">
-        <br>
-        <h4 class="space">{{ site.location | upcase }}</h4>
-        {% if site.date == true %}<h5>{{ site.time | date_to_long_string | upcase }}</h5>{% endif %}
-        <br>
-      </div>
+      <br>
       {% include articles.html %}
     </div>
 

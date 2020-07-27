@@ -1,6 +1,10 @@
 <div class="articles">
+  {% assign posts = site.posts %}
+  {% if site.paginate %}
+    {% assign posts = paginator.posts %}
+  {% endif %}
 
-  {% for post in site.posts %}
+  {% for post in posts %}
 
       {% cycle 'add row' : '<div class="rows">', nil, nil %}
       <div class="six columns abstract">
@@ -15,3 +19,19 @@
   {% endfor %}
   {% cycle 'end row' : nil, '</div>', '</div>', '</div>' %}
 </div>
+
+{% if site.paginate %}
+<div class="pagination">
+  <span class="page_number">
+  {% if paginator.previous_page %}
+  <a href="{{ paginator.previous_page_path }}" class="previous">&laquo; Previous</a>
+  {% endif %}
+
+  Page: {{ paginator.page }} of {{ paginator.total_pages }}
+
+  {% if paginator.next_page %}
+  <a href="{{ paginator.next_page_path }}" class="next">Next &raquo;</a>
+  {% endif %}
+  </span>
+</div>
+{% endif %}

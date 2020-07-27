@@ -45,9 +45,13 @@ theme: minima
 gems:
   - jekyll-feed
   - jekyll-seo-tag
+  - jekyll-paginate
 exclude:
   - Gemfile
   - Gemfile.lock
 plugins_dir:
   - jekyll-roman
   - jekyll-seo-tag
+
+paginate: 8
+paginate_path: posts/page:num/

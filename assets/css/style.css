@@ -190,6 +190,18 @@ li > a.tooltip:hover + .tooltiptext {
   visibility: visible;
 }
 
+.pagination {
+  position: relative;
+  width: 100%;
+  display: grid;
+  justify-content: center;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px 20px;
+  box-sizing: border-box;
+  font-size: 1.5em;
+}
+
 @media only screen
 and (min-device-width : 768px)  {
   .threecol {

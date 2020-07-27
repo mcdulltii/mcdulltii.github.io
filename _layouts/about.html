@@ -9,12 +9,13 @@
     {% include nav.html %}
 
     <div class="container">
-      <h1 class="brand title center" id = "title">{{ site.title | upcase }}</h1>
+      <h1 class="brand title center" id="type">{{ site.title | upcase }}</h1>
       <h3 class="center">{{ site.author }}</h3>
       <h5 class="center">{{ site.description | markdownify }}</h5>
       <hr/>
-      <p class="right">{{ site.tagline }}</p>
+      <p class="right tagline">{{ site.tagline }}</p>
       <div class="center">
+        <h4 class="space">{{ site.location | upcase }}</h4>
         <h5>{{ page.description }}</h5>
         {% if site.date == true %}<h5>Updated since <i>{{ site.time | date_to_long_string | upcase }}</i></h5>{% endif %}
         <br>
