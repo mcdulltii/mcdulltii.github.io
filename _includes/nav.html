@@ -2,6 +2,7 @@
   <ul id="navlist" class="left">
     <li {% if page.url == "/" %}class="active"{% endif %}><a href="{{ site.baseurl }}/">Home</a></li>
     <li {% if page.url == "/about/" %}class="active"{% endif %}><a href="{{ site.baseurl }}/about/">About</a></li>
+    <li {% if page.url == "/list/" %}class="active"{% endif %}><a href="{{ site.baseurl }}/list/">List</a></li>
     {% for nav in site.data.nav.social %}
     {% if nav.title == "Renders" %}
     <li><a href="{{ nav.href }}" target="_blank" class="tooltip">{{ nav.title }}</a><span class="tooltiptext">Use WIFI!</span></li>

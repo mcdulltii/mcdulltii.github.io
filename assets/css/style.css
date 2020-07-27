@@ -202,6 +202,10 @@ li > a.tooltip:hover + .tooltiptext {
   font-size: 1.5em;
 }
 
+.small {
+  font-size: 1.8em;
+}
+
 @media only screen
 and (min-device-width : 768px)  {
   .threecol {

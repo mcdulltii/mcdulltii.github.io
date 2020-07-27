@@ -1,0 +1,13 @@
+<div class="articles">
+  {% for post in site.posts %}
+
+      {% cycle 'add row' : '<div class="rows">', nil, nil %}
+      <div class="nine columns abstract">
+        <a href="{{ site.baseurl }}{{ post.url }}" class="link">
+        <h3 class="small">{{ post.title }}</h3>
+        </a>
+      </div>
+      {% cycle 'end row' : nil, nil, '</div>' %}
+  {% endfor %}
+  {% cycle 'end row' : nil, '</div>', '</div>', '</div>' %}
+</div>
