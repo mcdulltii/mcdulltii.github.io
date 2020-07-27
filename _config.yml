@@ -33,9 +33,10 @@ lang: en
 social:
   name: Aaron Ti
   links:
+    - https://mcdulltii.github.io/pages/
+    - https://instagram.com/aaronti_
     - https://github.com/mcdulltii
     - https://github.com/mcdullti
-    - https://instagram.com/aaronti_
 
 # Build settings
 exclude: README.md
