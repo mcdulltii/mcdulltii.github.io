@@ -18,7 +18,6 @@ abstract: CDDC20 Writeups WG3 - WG1. Consists of blood, sweat and tears from ove
 ##### [Spin](#wg-3-7)
 ##### [3-DCS](#wg-3-8)
 ##### [I Love Bach](#wg-3-9)
-##### [What Time Is It? [2]](#wg-3-10)
 ##### [BYWT2](#wg-2-1)
 ##### [EncryptSvc2](#wg-2-2)
 ##### [Find Their Wallet!](#wg-2-3)
@@ -476,32 +475,6 @@ Hello Nikita
 ```
 
 Flag: `CDDC20{Hello_Nikita}`
-
----
-
-### <a name="wg-3-10"></a>What Time Is It? [2]
-
-![time 2]({{ site.baseurl }}/assets/img/CDDC20/What_time_is_it_2.png)
-
-This challenge was only solved by one team, proving how misleading the title is and how guessy this challenge was
-
-The hint for this challenge was `base12`, where i guess 12 is related to time, since its the number of numbers on an analog clock
-
-```
-6347880643.209:9567.97362:37635790362021060442:9:8.47173013.100143699:3:0488637.4578918689614:421.888606155:667.7837.7
-```
-
-As the sequence of numbers, have `.` and `:`, the title misdirected us towards the 13digits Akamai/Linux timestamp formats, which led us nowhere
-
-Instead, `. and :` are `A and B` respectively representing the 11th and 12th characters for base12 encoding, where when converted to ASCII, will obtain the flag
-
-```python
-'6347880643.209:9567.97362:37635790362021060442:9:8.47173013.100143699:3:0488637.4578918689614:421.888606155:667.7837.7'
-```
-
-(Writeup was wrong gonna edit ltr)
-
-Flag: `Didnt decode this yet`
 
 ---
 
