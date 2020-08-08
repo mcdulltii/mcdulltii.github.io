@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "ProcessHollowing"
+title:  "Process Hollowing"
 author: Aaron Ti
 date:   2020-08-06
 category: Exploits
@@ -119,4 +119,6 @@ bool runPE32(LPWSTR targetPath, BYTE* payload, SIZE_T payload_size, ULONGLONG de
 
 ## Reference
 
-- https://github.com/hasherezade/demos/tree/master/run_pe
+- [RunPE](https://github.com/hasherezade/demos/tree/master/run_pe)
+
+- [C#-RunPE](https://github.com/NYAN-x-CAT/CSharp-RunPE)
