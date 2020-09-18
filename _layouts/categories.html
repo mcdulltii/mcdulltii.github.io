@@ -42,7 +42,7 @@
             {% if post.category contains tag %}
             <li>
             <h5>
-            <a href="{{ post.website }}">
+            <a href="{{ site.baseurl }}{{ post.url }}">
             {{ post.title }}
             </a>
             <small>&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;{{ post.date | date_to_string }}</small>
