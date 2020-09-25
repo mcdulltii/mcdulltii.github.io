@@ -10,7 +10,13 @@ body{
   background-size: cover;
   background-position: center;
   background-repeat: repeat-y;
-  background-image: url("../img/bg.jpg");
+}
+
+canvas {
+  position: fixed;
+  top: 10%;
+  left: 25%;
+  z-index: -99;
 }
 
 body::selection{
