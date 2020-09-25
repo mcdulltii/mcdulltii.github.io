@@ -15,7 +15,7 @@ body{
 canvas {
   position: fixed;
   top: 10%;
-  left: 25%;
+  left: -25%;
   z-index: -99;
 }
 
@@ -246,5 +246,8 @@ and (min-device-width : 768px)  {
   }
   p > code {
     display: initial;
+  }
+  canvas {
+    left: 25%;
   }
 }
