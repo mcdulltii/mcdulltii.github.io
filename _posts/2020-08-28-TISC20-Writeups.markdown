@@ -39,7 +39,7 @@ By printing the output, I was able to determine which password was the actual on
 
 The output text finally obtained is encoded several times. Using Cyberchef to automatically detect the file signatures at every point, I was able to find out that the text file is encoded using gzip, bzip2, zlib, and xz compression methods, and hex and base64 encoding methods.
 
-As the output text is encoded so many times, it was better to creaate a script to detect the compression and encoding methods, then decompress and decode them automatically to obtain the final flag.
+As the output text is encoded so many times, it was better to create a script to detect the compression and encoding methods, then decompress and decode them automatically to obtain the final flag.
 
 ```python
 import gzip
