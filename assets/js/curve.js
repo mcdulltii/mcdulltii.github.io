@@ -10,7 +10,7 @@ function draw() {
     iterate();
   }
 
-  if (frameCount > 500) {
+  if (frameCount > 400) {
     noLoop();
   }
 }
@@ -55,7 +55,7 @@ function path(pathPoints){
 
 function points() {
   //two points somewhere on a circle
-  var r = width/2.1;
+  var r = width/2.2;
   var theta1 = randomGaussian(0,PI/4);
   var theta2 = theta1 + randomGaussian(0,PI/3);
   var v1 = createVector(width/2 + r*cos(theta1),width/2 + r*sin(theta1));
