@@ -60,5 +60,5 @@ plugins_dir:
   - jekyll-roman
   - jekyll-seo-tag
 
-paginate: 8
+paginate: 6
 paginate_path: posts/page:num/

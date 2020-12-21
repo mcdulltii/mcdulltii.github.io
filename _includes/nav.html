@@ -1,7 +1,8 @@
-<div class="container">
+<div class="container" id="navcontainer">
   <ul id="navlist" class="left">
     <li {% if page.url == "/" %}class="active"{% endif %}><a href="{{ site.baseurl }}/">Home</a></li>
     <li {% if page.url == "/about/" %}class="active"{% endif %}><a href="{{ site.baseurl }}/about/">About</a></li>
+    <li><a class="lnk_modal-open" data-modalTitle="" data-modalDesc="" href="https://mcdulltii.github.io/webterm" data-modal="https://mcdulltii.github.io/webterm">Web_Shell</a></li>
     <li {% if page.url == "/list/" %}class="active"{% endif %}><a href="{{ site.baseurl }}/list/">List</a></li>
     <li {% if page.url == "/categories/" %}class="active"{% endif %}><a href="{{ site.baseurl }}/categories/">Categories</a></li>
     <li style="border-left: 3px solid white; height: 10px;"></li>
