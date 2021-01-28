@@ -190,7 +190,7 @@ p > code {
   z-index: 1;
 }
 
-a.tooltip:hover > .tooltiptext {
+a.tooltip:hover + .tooltiptext {
   visibility: visible;
 }
 

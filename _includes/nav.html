@@ -8,7 +8,7 @@
     <li style="border-left: 3px solid white; height: 10px;"></li>
     {% for nav in site.data.nav.social %}
     {% if nav.title == "Renders" %}
-    <li><a href="{{ nav.href }}" target="_blank" class="tooltip">{{ nav.title }}<span class="tooltiptext">Use WIFI!</span></a></li>
+    <li><a href="{{ nav.href }}" target="_blank" class="tooltip">{{ nav.title }}</a><span class="tooltiptext">Use WIFI!</span></li>
     {% else %}
     <li><a href="{{ nav.href }}" target="_blank">{{ nav.title }}</a></li>
     {% endif %}
