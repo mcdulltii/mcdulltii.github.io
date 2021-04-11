@@ -237,6 +237,14 @@ a.tooltip:hover + .tooltiptext {
   padding-top: 1% !important; 
 }
 
+#navcontainer {
+  height: 70px;
+}
+
+.sticky + div {
+  padding-top: 70px;
+}
+
 /* Referenced from https://codepen.io/2kool2/pen/LkaXay */
 /* Modal opening link cosmetics */
 .lnk_modal-img {
