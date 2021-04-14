@@ -12,10 +12,8 @@ var sticky = header.offsetTop;
 function stickynav() {
   if (window.pageYOffset > sticky) {
     header.classList.add("sticky");
-    header.classList.add("center");
   } else {
     header.classList.remove("sticky");
-    header.classList.remove("center");
   }
 }
 

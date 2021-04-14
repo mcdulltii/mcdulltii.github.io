@@ -49,7 +49,7 @@ kramdown:
     default_lang: html
     css_class: 'highlight'
 
-gems:
+plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-paginate
@@ -61,5 +61,5 @@ plugins_dir:
   - jekyll-roman
   - jekyll-seo-tag
 
-paginate: 6
+paginate: 8
 paginate_path: posts/page:num/

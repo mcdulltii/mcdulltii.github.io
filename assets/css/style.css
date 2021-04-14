@@ -234,15 +234,20 @@ a.tooltip:hover + .tooltiptext {
   position: fixed !important;
   max-width: 100% !important;
   width: 100% !important;
-  padding-top: 1% !important; 
+  padding-top: 1% !important;
+  padding-left: 5% !important;
+}
+
+.sticky + div {
+  padding-top: 70px;
 }
 
 #navcontainer {
   height: 70px;
 }
 
-.sticky + div {
-  padding-top: 70px;
+#mobile {
+  display: none !important;
 }
 
 /* Referenced from https://codepen.io/2kool2/pen/LkaXay */
@@ -494,5 +499,8 @@ and (min-device-width : 800px)  {
   }
   canvas {
     left: 25%;
+  }
+  #mobile {
+    display: inline !important;
   }
 }
