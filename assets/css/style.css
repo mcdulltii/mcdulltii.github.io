@@ -194,6 +194,10 @@ a.tooltip:hover + .tooltiptext {
   visibility: visible;
 }
 
+#dropbtn {
+  width: 100%;
+}
+
 .pagination {
   position: relative;
   width: 100%;
