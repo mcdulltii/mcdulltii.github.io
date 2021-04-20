@@ -168,6 +168,12 @@ stack_setup(new_stack, argc - 1, argv + 1, env, NULL,
 jump_with_stack(interp.entry_point, new_stack);
 ```
 
+## Summary
+
+The implementation can be summarised as shown below.
+
+[Reflective Loading]({{ site.baseurl }}/assets/img/ReflectiveLoading.png)
+
 ## After-thoughts
 
 The implementation of this fully standalone, embedded, reflective loading binary was initially for a reverse engineering challenge, which is not really suited for. The encoding and decoding method I have chosen is painfully obvious when debugging, since the same operations are carried out for a huge memory array. The mmap-ed region can just be traced and dumped right after the decoding operations have finished. Since the binary reflective loads a complete binary, the dumped binary can be analysed on its own.
