@@ -194,8 +194,12 @@ a.tooltip:hover + .tooltiptext {
   visibility: visible;
 }
 
-#dropbtn {
+[id^="dropbtn"] {
   width: 100%;
+}
+
+table, th, td {
+  border: 1px solid white;
 }
 
 .pagination {
