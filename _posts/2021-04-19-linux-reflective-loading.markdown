@@ -172,7 +172,7 @@ jump_with_stack(interp.entry_point, new_stack);
 
 The implementation can be summarised as shown below.
 
-[Reflective Loading]({{ site.baseurl }}/assets/img/ReflectiveLoading.png)
+![Reflective Loading]({{ site.baseurl }}/assets/img/ReflectiveLoading.png)
 
 ## After-thoughts
 
