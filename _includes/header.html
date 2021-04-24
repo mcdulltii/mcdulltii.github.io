@@ -3,16 +3,12 @@
 <meta http-equiv="content-language" content="{{ site.lang }}">
 <link rel="icon" href="{{ site.baseurl }}/favicon.ico" type="image/x-icon" />
 
-{% if page.url == "/about/" %}
 <script src="{{ site.baseurl }}/assets/js/p5.js"></script>
 <script src="{{ site.baseurl }}/assets/js/p5.sound.min.js"></script>
+{% if page.url == "/about/" %}
 <script src="{{ site.baseurl }}/assets/js/curve.js"></script>
 {% else %}
-<style>
-    body {
-        background-image: url("{{ site.baseurl }}/assets/img/bg.jpg");
-    }
-</style>
+<script src="{{ site.baseurl}}/assets/js/hexagon.js"></script>
 {% endif %}
 
 <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/style.css">

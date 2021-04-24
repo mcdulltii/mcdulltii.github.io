@@ -1,7 +1,8 @@
 var pathPoints = []
 
 function setup() {
-  createCanvas(800, 800); 
+  let cnv = createCanvas(800, 800);
+  cnv.id('canvas');
   background(0);
 } 
 
