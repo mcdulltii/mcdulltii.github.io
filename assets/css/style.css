@@ -40,6 +40,76 @@ p::selection{
   color: rgba(240, 240, 240, 0.6)
 }
 
+.vimeo-wrapper {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   z-index: -1;
+   pointer-events: none;
+   overflow: hidden;
+}
+
+.vimeo-wrapper iframe {
+   width: 100vw;
+   height: 56.25vw; /* Given a 16:9 aspect ratio, 9/16*100 = 56.25 */
+   min-height: 100vh;
+   min-width: 177.77vh; /* Given a 16:9 aspect ratio, 16/9*100 = 177.77 */
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  text-align: center;
+  color: white;
+  transition: 0.4s;
+}
+
+header:hover {
+  background: rgba(255, 255, 255, 0.8);
+  color: #000;
+}
+
+div#comment {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+div#comment h2 {
+  font-family: Century Schoolbook, Century Schoolbook L, Georgia, serif;
+  font-size: 6vmin;
+  text-align: center;
+  margin: 2rem 3rem 0;
+  mix-blend-mode: overlay;
+  color: #fff;
+  font-weight: 100;
+}
+
+nav a {
+  text-decoration: none;
+  color: inherit;
+  padding: 1rem;
+}
+
+nav a:hover {
+  color: black !important;
+}
+
+h1.name {
+  font-family: Moderne Sans, sans-serif;
+  text-align: center;
+  font-size: 4em;
+  width: 100%;
+  letter-spacing: .5rem;
+}
+
 #navlist > .active > a{
     color: rgb(240,240,240);
     text-decoration: overline;

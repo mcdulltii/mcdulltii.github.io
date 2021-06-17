@@ -7,8 +7,9 @@
 <script src="{{ site.baseurl }}/assets/js/p5.sound.min.js"></script>
 {% if page.url == "/about/" %}
 <script src="{{ site.baseurl }}/assets/js/curve.js"></script>
-{% else %}
+{% elsif page.url != "/homepage/" %}
 <script src="{{ site.baseurl}}/assets/js/hexagon.js"></script>
+{% else %}
 {% endif %}
 
 <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/style.css">
