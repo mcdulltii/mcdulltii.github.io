@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>{{ site.title }}</title>
+    <title>{{ page.title | default: site.title }}</title>
     {% include header.html %}
     {% seo %}
   </head>
@@ -9,7 +9,7 @@
 
     {% include nav.html %}
     <div class="container">
-      <h1 class="brand title center" id="type">{{ site.title | upcase }}</h1>
+      <h1 class="brand title center" id="type">{{ page.title | upcase | default: site.title | upcase}}</h1>
       <h3 class="center">{{ site.author }}</h3>
       <h5 class="center">{{ site.description | markdownify }}</h5>
       <hr/>
