@@ -147,6 +147,7 @@ hr.simple {
   border-top: 2px solid #ccc !important;
   border-bottom: 2px solid #ccc !important;
   border-radius: 8px;
+  cursor: pointer;
 }
 
 .repo-card {
@@ -256,10 +257,6 @@ table, th, td {
 
 #navcontainer {
   height: 70px;
-}
-
-#mobile {
-  display: none !important;
 }
 
 /* Referenced from https://codepen.io/2kool2/pen/LkaXay */
@@ -511,8 +508,5 @@ and (min-device-width : 800px)  {
   }
   #canvas {
     left: 25%;
-  }
-  #mobile {
-    display: inline !important;
   }
 }

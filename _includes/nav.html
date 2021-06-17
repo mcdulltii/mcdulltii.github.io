@@ -8,11 +8,7 @@
     <li id="mobile" {% if page.url == "/categories/" %}class="active"{% endif %}><a href="{{ site.baseurl }}/categories/">Categories</a></li>
     <li style="border-left: 3px solid white; height: 10px;"></li>
     {% for nav in site.data.nav.social %}
-    {% if nav.title == "Renders" %}
-    <li id="mobile"><a href="{{ nav.href }}" target="_blank" class="tooltip">{{ nav.title }}</a><span class="tooltiptext">Use WIFI!</span></li>
-    {% else %}
     <li><a href="{{ nav.href }}" target="_blank">{{ nav.title }}</a></li>
-    {% endif %}
     {% endfor %}
   </ul>
 </div>
