@@ -329,6 +329,10 @@ table, th, td {
   height: 70px;
 }
 
+#mobile {
+  display: none !important;
+}
+
 /* Referenced from https://codepen.io/2kool2/pen/LkaXay */
 /* Modal opening link cosmetics */
 .lnk_modal-img {
@@ -578,5 +582,8 @@ and (min-device-width : 800px)  {
   }
   #canvas {
     left: 25%;
+  }
+  #mobile {
+    display: inline !important;
   }
 }
