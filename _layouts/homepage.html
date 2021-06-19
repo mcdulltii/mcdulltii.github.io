@@ -3,14 +3,12 @@
   <head>
     <title>{{ page.title | default: site.title }}</title>
     {% include header.html %}
-    <script src="https://player.vimeo.com/api/player.js"></script>
     {% seo %}
   </head>
   <body style="overflow: hidden;">
 
-    <div class="vimeo-wrapper">
-      <iframe src="https://player.vimeo.com/video/368071353?autopause=0&muted=1&color=000000&portrait=0&background=1&autoplay=1&loop=1&byline=0&title=0"
-              frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+    <div id="mobile" class="vimeo-wrapper">
+      <iframe frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
     </div>
     <header>
       <h1 class="name">Aaron Ti</h1>
@@ -22,5 +20,6 @@
       <h2>Everything is designed. Few things are designed well.</h2>
     </div>
 
+    <script src="{{ site.baseurl }}/assets/js/vimeo.js"></script>
   </body>
 </html>
