@@ -3,7 +3,7 @@ function regurl(url) {
 }
 
 var ref = document.referrer;
-if (ref.length == 0 || regurl(ref) == window.location.hostname) {
+if (ref.length == 0 || regurl(ref) != window.location.hostname) {
     // redirect
     window.location.href = '/homepage';
 }
