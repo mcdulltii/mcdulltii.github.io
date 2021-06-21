@@ -9,7 +9,9 @@
 <script src="{{ site.baseurl }}/assets/js/curve.js"></script>
 {% elsif page.url != "/homepage/" %}
 <script src="{{ site.baseurl}}/assets/js/hexagon.js"></script>
+{% if page.url == "/" %}
 <script src="{{ site.baseurl }}/assets/js/redirect.js"></script>
+{% endif %}
 {% else %}
 <script src="https://player.vimeo.com/api/player.js"></script>
 {% endif %}
