@@ -1,6 +1,6 @@
 function checkBackground() {
     var vimeo = $('.vimeo-wrapper')[0];
-    if($(window).width() <= 575){ // "Small" devices size in Bootstrap
+    if($(window).width() > 575){ // "Small" devices size in Bootstrap
         if (vimeo.children.length == 0) {
             const iframe = document.createElement("iframe");
             iframe.setAttribute("webkitallowfullscreen","");
