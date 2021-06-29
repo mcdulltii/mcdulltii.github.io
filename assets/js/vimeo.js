@@ -10,5 +10,6 @@ $(document).ready(function() {
         vimeo.children[0].src="https://player.vimeo.com/video/368071353?autopause=0&muted=1&color=000000&portrait=0&background=1&autoplay=1&loop=1&byline=0&title=0&controls=0";
     } else {
         vimeo.remove();
+        document.body.background = "https://i.vimeocdn.com/video/824643252?mw=960&mh=540";
     }
 });
