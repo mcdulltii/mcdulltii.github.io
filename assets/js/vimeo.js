@@ -10,7 +10,7 @@ function checkBackground() {
             iframe.setAttribute("frameborder","0");
             vimeo.appendChild(iframe);
         }
-        vimeo.children[0].src="https://player.vimeo.com/video/368071353?autopause=0&muted=1&color=000000&portrait=0&background=1&autoplay=1&loop=1&byline=0&title=0&controls=0";
+        vimeo.children[0].src="https://player.vimeo.com/video/368071353?autopause=0&muted=1&color=000000&portrait=0&background=1&autoplay=1&loop=1&byline=0&title=0&controls=0&quality=1080p";
         document.body.style.backgroundImage = "";
     } else {
         if (vimeo.children.length != 0) {

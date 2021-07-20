@@ -66,13 +66,8 @@ header {
   position: fixed;
   width: 100%;
   text-align: center;
+  background: rgb(10,10,10,0.25);
   color: white;
-  transition: 0.4s;
-}
-
-header:hover {
-  background: rgba(255, 255, 255, 0.8);
-  color: #000;
 }
 
 div#comment {
@@ -87,7 +82,6 @@ div#comment h2 {
   font-size: 6vmin;
   text-align: center;
   margin: 2rem 3rem 0;
-  mix-blend-mode: overlay;
   color: #fff;
   font-weight: 100;
 }
@@ -99,7 +93,7 @@ nav a {
 }
 
 nav a:hover {
-  color: black !important;
+  text-decoration: underline;
 }
 
 h1.name {
@@ -326,7 +320,7 @@ table, th, td {
 }
 
 #navcontainer {
-  height: 70px;
+  padding-bottom: 1em;
 }
 
 #mobile {
@@ -585,5 +579,12 @@ and (min-device-width : 800px)  {
   }
   #mobile {
     display: inline !important;
+  }
+  header {
+    background: none;
+    mix-blend-mode: difference;
+  }
+  div#comment h2 {
+    mix-blend-mode: overlay;
   }
 }

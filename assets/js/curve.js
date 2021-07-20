@@ -25,7 +25,7 @@ function iterate() {
   }
 
   //draw the path
-  stroke(255,5);
+  stroke(210,5);
   for(var i=0;i<pathPoints.length -1;i++){
     var v1 = pathPoints[i];
     var v2 = pathPoints[i+1];
