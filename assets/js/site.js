@@ -1,22 +1,3 @@
-// Sticky Nav
-// When the user scrolls the page, execute myFunction
-window.onscroll = function() {stickynav()};
-
-// Get the header
-var header = document.getElementById("navcontainer");
-
-// Get the offset position of the navbar
-var sticky = header.offsetTop;
-
-// Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
-function stickynav() {
-  if (window.pageYOffset > sticky) {
-    header.classList.add("sticky");
-  } else {
-    header.classList.remove("sticky");
-  }
-}
-
 // iframe modal
 // https://john-dugan.com/javascript-debounce/
 var debounce=function(e,t,n){var a;return function(){var r=this,i=arguments,o=function(){a=null,n||e.apply(r,i)},s=n&&!a;clearTimeout(a),a=setTimeout(o,t||200),s&&e.apply(r,i)}};

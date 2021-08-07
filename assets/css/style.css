@@ -66,8 +66,7 @@ header {
   position: fixed;
   width: 100%;
   text-align: center;
-  background: rgb(10,10,10,0.25);
-  color: white;
+  color: black;
 }
 
 div#comment {
@@ -301,26 +300,6 @@ table, th, td {
 .anchor {
   margin-top: 10px;
   margin-bottom: 40px;
-}
-
-.sticky {
-  background: black;
-  opacity: 85%;
-  z-index: 1; 
-  top: 0;
-  position: fixed !important;
-  max-width: 100% !important;
-  width: 100% !important;
-  padding-top: 1% !important;
-  padding-left: 5% !important;
-}
-
-.sticky + div {
-  padding-top: 70px;
-}
-
-#navcontainer {
-  padding-bottom: 1em;
 }
 
 #mobile {
@@ -579,10 +558,6 @@ and (min-device-width : 800px)  {
   }
   #mobile {
     display: inline !important;
-  }
-  header {
-    background: none;
-    mix-blend-mode: difference;
   }
   div#comment h2 {
     mix-blend-mode: overlay;
