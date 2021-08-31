@@ -7,7 +7,9 @@ permalink: /about/
 # 2021
 
 - Learn Scala, Kotlin, Swift, etc.
+- 1st Runner-up in DSTA CDDC 2021 (BrainHack [Certificate]({{ site.baseurl }}/assets/img/BrainHacks_Aaron.opencert))
 - Created 2 [RE challenges](https://github.com/mcdulltii/coding/tree/master/CTFSG_RE) for CTFSGCTF: [Circuit Breaker](https://github.com/mcdulltii/coding/raw/master/CTFSG_RE/CircuitBreaker) & [Fries and Ice Cream](https://github.com/mcdulltii/coding/raw/master/CTFSG_RE/FriesandIceCream)
+- Took a reverse-engineering course by Kaspersky ([Targeted Malware Analysis](https://xtraining.kaspersky.com/courses/targeted-malware-reverse-engineering))
 
 # 2020
 
