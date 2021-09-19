@@ -16,7 +16,7 @@ function checkBackground() {
         if (vimeo.children.length != 0) {
             vimeo.children[0].remove();
         }
-        document.body.style.backgroundImage = 'url("https://i.vimeocdn.com/video/1208872053?mw=960&mh=540")';
+        document.body.style.backgroundImage = 'url("https://github.com/mcdulltii/pages/raw/gh-pages/Photos/Flower0280.png")';
     }
 }
 
