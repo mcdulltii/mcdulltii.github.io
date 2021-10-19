@@ -15,7 +15,17 @@ IDA 7.4+ Python3 plugin to automatically detect obfuscated code and state machin
 Implementation is based on IDA 7.4+ (Python3). Check out the following blog posts for more information on the Binary Ninja implementation:
 
 * [Automated Detection of Control-flow Flattening](https://synthesis.to/2021/03/03/flattening_detection.html)
+
+<iframe sandbox="allow-same-origin"
+    src="https://synthesis.to/2021/03/03/flattening_detection.html"
+    style="background: white; width: 100%; height: 400px;"></iframe>
+
 * [Automated Detection of Obfuscated Code](https://synthesis.to/2021/08/10/obfuscation_detection.html)
+
+<iframe sandbox="allow-same-origin"
+    src="https://synthesis.to/2021/08/10/obfuscation_detection.html"
+    style="background: white; width: 100%; height: 400px;"></iframe>
+
 * [Referenced Repository](https://github.com/mrphrazer/obfuscation_detection)
 
 As cited from the above blogs:
@@ -47,6 +57,18 @@ Large basic blocks guarantee that a sequence of code is executed in a row. Often
 Up until now, the developed heuristics aimed at detecting complex code. However, sometimes code obfuscation tries to confuse disassemblers by introducing opaque control transfers to addresses that are in the middle of valid instructions. This way, the disassembler does not know how to proceed and build the control-flow graph, since two instructions overlap. In non-obfuscated code, this can also happen in cases where the disassembler mistakenly interprets data as code, therefore creates meaningless disassembly.
 
 ## Evaluation
+
+### GUI Implementation
+
+- Heuristic GUI analysis
+
+![Heuristic analysis](https://raw.githubusercontent.com/mcdulltii/obfDetect/master/img/heuristic_gui.png)
+
+- Single function heuristic GUI analysis
+
+![Single heuristic analysis](https://raw.githubusercontent.com/mcdulltii/obfDetect/master/img/singleheuristic_gui.png)
+
+### CLI Implementation
 
 - A small binary with 2 scanned functions
 
