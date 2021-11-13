@@ -27,6 +27,23 @@ In [this paper](https://www.sciencedirect.com/science/article/pii/S0020025520311
 
 ![Proposed Cryptosystem](https://ars.els-cdn.com/content/image/1-s2.0-S0020025520311336-gr4_lrg.jpg)
 
+![Image Encryption Comparison](https://raw.githubusercontent.com/mcdulltii/mcdulltii.github.io/master/assets/img/imgenc/q.png)
+
+| Variables | Values |
+| :-- | --: |
+| xn | 0.6871409815023363787389598655864 |
+| yn | 0.4102339834686560271492794527148 |
+| zn | 0.5182795675111749877927991292381 |
+| a1 | 3.9538320032982445795255443954375 |
+| a2 | 3.8102660350797150634605259256205 |
+| a3 | 3.8481480146370818928858170693275 |
+| q1 | 1.3676273505774996230854867462767 |
+| q2 | -0.0249366189753303935106032440672 |
+| q3 | 1.7291988783192659973053650901420 |
+| n1 | 54751 |
+| n2 | 84301 |
+| n3 | 90817 |
+
 <script src="{{ site.baseurl }}/assets/js/imageencryption/1.js"></script>
 
 #### <a name="ie-2"></a>Image encryption using chaotic logistic map
@@ -34,6 +51,17 @@ In [this paper](https://www.sciencedirect.com/science/article/pii/S0020025520311
 As chaotic maps have many fundamental properties such as ergodicity, mixing property and sensitivity to initial condition/system parameter and which can be considered analogous to some cryptographic properties of ideal ciphers such as confusion, diffusion, balance and avalanche property etc. In this communication, a new image encryption scheme is proposed based on chaotic logistic maps in order to meet the requirements of the secure image transfer. In the [proposed encryption process](https://www.sciencedirect.com/science/article/pii/S026288560600103X), eight different types of operations are used to encrypt the pixels of an image and which operation will be used for a particular pixel is decided by the outcome of the second logistic map. Thus, the second chaotic map further increases the confusion in the relationship between the encrypted and its original image. To make the cipher more robust against any attack, after each encryption of a block of sixteen pixels, the secret key is modified.
 
 <table style="width:100%;"><thead class="valign-top"><tr class="rowsep-1"><th scope="col">Group no.</th><th scope="col">Intervals of <em>Y</em> values</th><th scope="col">Operations for encryption/decryption</th></tr></thead><tbody><tr><td>1</td><td>0.10–0.13, 0.34–0.37, 0.58–0.62</td><td>NOT operation, i.e. invert the bits of all three RGB bytes</td></tr><tr><td>2</td><td>0.13–0.16, 0.37–0.40, 0.62–0.66</td><td><em>R</em>⊕<em>K</em><sub>4</sub>, <em>G</em>⊕<em>K</em><sub>5</sub> and <em>B</em>⊕<em>K</em><sub>6</sub></td></tr><tr><td class="valign-top" rowspan="4">3</td><td class="valign-top" rowspan="4">0.16–0.19, 0.40–0.43, 0.66–0.70</td><td>Encryption</td></tr><tr><td>((<em>R</em>)<sub>10</sub>+(<em>K</em><sub>4</sub>)<sub>10</sub>+(<em>K</em><sub>5</sub>)<sub>10</sub>) mod&nbsp;256, ((<em>G</em>)<sub>10</sub>+(<em>K</em><sub>5</sub>)<sub>10</sub>+(<em>K</em><sub>6</sub>)<sub>10</sub>) mod&nbsp;256, ((<em>B</em>)<sub>10</sub>+(<em>K</em><sub>6</sub>)<sub>10</sub>+(<em>K</em><sub>4</sub>)<sub>10</sub>) mod&nbsp;256</td></tr><tr><td>Decryption</td></tr><tr><td>((<em>R</em>)<sub>10</sub>+256−(<em>K</em><sub>4</sub>)<sub>10</sub>−(<em>K</em><sub>5</sub>)<sub>10</sub>), ((<em>G</em>)<sub>10</sub>+256−(<em>K</em><sub>5</sub>)<sub>10</sub>−(<em>K</em><sub>6</sub>)<sub>10</sub>), ((<em>B</em>)<sub>10</sub>+256−(<em>K</em><sub>6</sub>)<sub>10</sub>−(<em>K</em><sub>4</sub>)<sub>10</sub>)</td></tr><tr><td class="valign-top" rowspan="4">4</td><td class="valign-top" rowspan="4">0.19–0.22, 0.43–0.46, 0.70–0.74</td><td>Encryption</td></tr><tr><td><em>NOT</em>(<em>R</em>⊕<em>K</em><sub>4</sub>), <em>NOT</em>(<em>G</em>⊕<em>K</em><sub>5</sub>), <em>NOT</em>(<em>B</em>⊕<em>K</em><sub>6</sub>)</td></tr><tr><td>Decryption</td></tr><tr><td>(<em>NOT</em>(<em>R</em>))⊕<em>K</em><sub>4</sub>, (<em>NOT</em>(<em>G</em>))⊕<em>K</em><sub>5</sub>, (<em>NOT</em>(<em>B</em>))⊕<em>K</em><sub>6</sub></td></tr><tr><td class="valign-top">5</td><td class="valign-top">0.22–0.25, 0.46–0.49, 0.74–0.78</td><td>Similar to Group 2 except that <em>K</em><sub>7</sub>, <em>K</em><sub>8</sub> and <em>K</em><sub>9</sub> are used in lieu of <em>K</em><sub>4</sub>, <em>K</em><sub>5</sub> and <em>K</em><sub>6</sub>, respectively.</td></tr><tr><td class="valign-top">6</td><td class="valign-top">0.25–0.28, 0.49–0.52, 0.78–0.82</td><td>Similar to Group 3 except that <em>K</em><sub>7</sub>, <em>K</em><sub>8</sub> and <em>K</em><sub>9</sub> are used in lieu of <em>K</em><sub>4</sub>, <em>K</em><sub>5</sub> and <em>K</em><sub>6</sub>, respectively.</td></tr><tr><td class="valign-top">7</td><td class="valign-top">0.28–0.31, 0.52–0.55, 0.82–0.86</td><td>Similar to Group 4 except that <em>K</em><sub>7</sub>, <em>K</em><sub>8</sub> and <em>K</em><sub>9</sub> are used in lieu of <em>K</em><sub>4</sub>, <em>K</em><sub>5</sub> and <em>K</em><sub>6</sub>, respectively.</td></tr><tr><td class="valign-top">8</td><td class="valign-top">0.31–0.34, 0.55–0.58, 0.86–0.90</td><td>No operations are made on <em>R</em>,<em>G</em> and <em>B</em> bytes</td></tr></tbody></table>
+
+![Image Encryption Comparison](https://raw.githubusercontent.com/mcdulltii/mcdulltii.github.io/master/assets/img/imgenc/log.png)
+
+| Variables | Values |
+| :-- | --: |
+| index1 | 4 |
+| index2 | 6 |
+| index3 | 0 |
+| indexlist | [[0.8333333333333333, 0.8666666666666666], [0.7333333333333333, 0.7666666666666666], [0.6333333333333333, 0.6666666666666666], [0.7, 0.7333333333333333], [0.5666666666666667, 0.6], [0.16666666666666669, 0.2], [0.33333333333333337, 0.3666666666666667], [0.3666666666666667, 0.4], [0.4, 0.43333333333333335], [0.26666666666666666, 0.30000000000000004], [0.7666666666666666, 0.7999999999999999], [0.13333333333333333, 0.16666666666666669], [0.6666666666666666, 0.7], [0.1, 0.13333333333333333], [0.5, 0.5333333333333333], [0.5333333333333333, 0.5666666666666667], [0.7999999999999999, 0.8333333333333333], [0.8666666666666666, 0.9], [0.4666666666666667, 0.5], [0.30000000000000004, 0.33333333333333337], [0.2, 0.23333333333333334], [0.23333333333333334, 0.26666666666666666], [0.6, 0.6333333333333333], [0.43333333333333335, 0.4666666666666667]] |
+| grouplist | [4, 5, 6, 6, 6, 3, 0, 1, 0, 3, 2, 3, 7, 5, 7, 4, 2, 1, 0, 5, 7, 4, 2, 1] |
+| k | ['1111', '0110', '1000', '0111', '0000', '0010', '0010', '0010', '0111', '0001', '0100', '0101', '0101', '1100', '1000', '0111', '1100', '0111', '0011', '1001'] |
 
 <script src="{{ site.baseurl }}/assets/js/imageencryption/2.js"></script>
 
@@ -49,6 +77,16 @@ The two important features for selecting any chaotic map in image encryption are
 
 ![Proposed Cryptosystem](https://ars.els-cdn.com/content/image/1-s2.0-S2214212619308270-gr4_lrg.jpg)
 
+![Image Encryption Comparison](https://raw.githubusercontent.com/mcdulltii/mcdulltii.github.io/master/assets/img/imgenc/cross.png)
+
+| Variables | Values |
+| :-- | --: |
+| x0 | 0.2762535590204497 |
+| xx | 0.3928896916940632 |
+| y0 | 0.020024310395463152 |
+| yx | 0.6365662408360173 |
+| hsh | 56c85fdb591c89abbb61bdb631070202394d5fd5c144daff1303f413351b3a37 |
+
 <script src="{{ site.baseurl }}/assets/js/imageencryption/3.js"></script>
 
 #### <a name="ie-4"></a>Colour byte scrambling technique for efficient image encryption based on combined chaotic map
@@ -56,6 +94,22 @@ The two important features for selecting any chaotic map in image encryption are
 In [this paper](https://ieeexplore.ieee.org/document/7754851), an image encryption scheme based on colour byte scrambling technique is proposed by using Logistic map and Ikeda map. The proposed scheme is using Logistic map for generating permutation sequence to shuffle the colour bytes (confusion) and Ikeda map is used for generating masking sequence to change the value of the colour bytes (diffusion) of the 24-bit colour image. The traditional scrambling techniques confusion and diffusion are applied continuously on the test image which leads to producing the cipher image which has good confusion and diffusion properties. In this scheme, the Logistic map is one dimensional which is simple and efficient and used for the generation of permutation sequences for achieving confusion. The two-dimensional Ikeda map is used for the generation of masking sequences for achieving diffusion.
 
 ![Proposed Cryptosystem](https://ieeexplore.ieee.org/mediastore_new/IEEE/content/media/7731602/7754737/7754851/7754851-fig-5-source-large.gif)
+
+![Image Encryption Comparison](https://raw.githubusercontent.com/mcdulltii/mcdulltii.github.io/master/assets/img/imgenc/byte.png)
+
+| Variables | Values |
+| :-- | --: |
+| r1 | 3.6417036301636764861200390441809 |
+| r2 | 3.7156486229407827970305788767291 |
+| r3 | 3.5273648853144021764194349088939 |
+| r4 | 3.9557898564534217378252378694015 |
+| x1 | 0.2269487821938834803958684460667 |
+| x2 | 0.3226240330364515962457971909316 |
+| x3 | 0.8572765495553988923660426735296 |
+| x4 | 0.6886448160968399179182597436011 |
+| y1 | 0.5760091308256071185311952831398 |
+| y2 | 0.6593374068771247209497232688591 |
+| miu | 0.8962150996380580103561896976316 |
 
 <script src="{{ site.baseurl }}/assets/js/imageencryption/4.js"></script>
 
@@ -70,5 +124,23 @@ Modifications are made to make it more robust against two more cryptanalytic att
 ![Equivalent Cryptosystem](https://ars.els-cdn.com/content/image/1-s2.0-S100757040900598X-gr2.jpg)
 
 ![Modified Cryptosystem](https://ars.els-cdn.com/content/image/1-s2.0-S100757040900598X-gr3.jpg)
+
+![Image Encryption Comparison](https://raw.githubusercontent.com/mcdulltii/mcdulltii.github.io/master/assets/img/imgenc/subs_0.png)
+
+| Variables | Values |
+| :-- | --: |
+| xn | 2.5186675676171912 |
+| yn | 5.792031495262999 |
+| K | 704.2434846927956 |
+| N | 840 |
+
+![Image Encryption Comparison](https://raw.githubusercontent.com/mcdulltii/mcdulltii.github.io/master/assets/img/imgenc/subs_1.png)
+
+| Variables | Values |
+| :-- | --: |
+| xn | 5.373068425055542 |
+| yn | 5.101480085089893 |
+| K | 483.88949085953874 |
+| N | 141 |
 
 <script src="{{ site.baseurl }}/assets/js/imageencryption/5.js"></script>
