@@ -29,6 +29,8 @@ In [this paper](https://www.sciencedirect.com/science/article/pii/S0020025520311
 
 ![Image Encryption Comparison](https://raw.githubusercontent.com/mcdulltii/mcdulltii.github.io/master/assets/img/imgenc/q.png)
 
+<div class="extend-table">
+
 | Variables | Values |
 | :-- | --: |
 | xn | 0.6871409815023363787389598655864 |
@@ -44,6 +46,8 @@ In [this paper](https://www.sciencedirect.com/science/article/pii/S0020025520311
 | n2 | 84301 |
 | n3 | 90817 |
 
+</div>
+
 <script src="{{ site.baseurl }}/assets/js/imageencryption/1.js"></script>
 
 #### <a name="ie-2"></a>Image encryption using chaotic logistic map
@@ -54,6 +58,8 @@ As chaotic maps have many fundamental properties such as ergodicity, mixing prop
 
 ![Image Encryption Comparison](https://raw.githubusercontent.com/mcdulltii/mcdulltii.github.io/master/assets/img/imgenc/log.png)
 
+<div class="extend-table">
+
 | Variables | Values |
 | :-- | --: |
 | index1 | 4 |
@@ -62,6 +68,8 @@ As chaotic maps have many fundamental properties such as ergodicity, mixing prop
 | indexlist | [[0.8333333333333333, 0.8666666666666666], [0.7333333333333333, 0.7666666666666666], [0.6333333333333333, 0.6666666666666666], [0.7, 0.7333333333333333], [0.5666666666666667, 0.6], [0.16666666666666669, 0.2], [0.33333333333333337, 0.3666666666666667], [0.3666666666666667, 0.4], [0.4, 0.43333333333333335], [0.26666666666666666, 0.30000000000000004], [0.7666666666666666, 0.7999999999999999], [0.13333333333333333, 0.16666666666666669], [0.6666666666666666, 0.7], [0.1, 0.13333333333333333], [0.5, 0.5333333333333333], [0.5333333333333333, 0.5666666666666667], [0.7999999999999999, 0.8333333333333333], [0.8666666666666666, 0.9], [0.4666666666666667, 0.5], [0.30000000000000004, 0.33333333333333337], [0.2, 0.23333333333333334], [0.23333333333333334, 0.26666666666666666], [0.6, 0.6333333333333333], [0.43333333333333335, 0.4666666666666667]] |
 | grouplist | [4, 5, 6, 6, 6, 3, 0, 1, 0, 3, 2, 3, 7, 5, 7, 4, 2, 1, 0, 5, 7, 4, 2, 1] |
 | k | ['1111', '0110', '1000', '0111', '0000', '0010', '0010', '0010', '0111', '0001', '0100', '0101', '0101', '1100', '1000', '0111', '1100', '0111', '0011', '1001'] |
+
+</div>
 
 <script src="{{ site.baseurl }}/assets/js/imageencryption/2.js"></script>
 
@@ -79,6 +87,8 @@ The two important features for selecting any chaotic map in image encryption are
 
 ![Image Encryption Comparison](https://raw.githubusercontent.com/mcdulltii/mcdulltii.github.io/master/assets/img/imgenc/cross.png)
 
+<div class="extend-table">
+
 | Variables | Values |
 | :-- | --: |
 | x0 | 0.2762535590204497 |
@@ -86,6 +96,8 @@ The two important features for selecting any chaotic map in image encryption are
 | y0 | 0.020024310395463152 |
 | yx | 0.6365662408360173 |
 | hsh | 56c85fdb591c89abbb61bdb631070202394d5fd5c144daff1303f413351b3a37 |
+
+</div>
 
 <script src="{{ site.baseurl }}/assets/js/imageencryption/3.js"></script>
 
@@ -96,6 +108,8 @@ In [this paper](https://ieeexplore.ieee.org/document/7754851), an image encrypti
 ![Proposed Cryptosystem](https://ieeexplore.ieee.org/mediastore_new/IEEE/content/media/7731602/7754737/7754851/7754851-fig-5-source-large.gif)
 
 ![Image Encryption Comparison](https://raw.githubusercontent.com/mcdulltii/mcdulltii.github.io/master/assets/img/imgenc/byte.png)
+
+<div class="extend-table">
 
 | Variables | Values |
 | :-- | --: |
@@ -110,6 +124,8 @@ In [this paper](https://ieeexplore.ieee.org/document/7754851), an image encrypti
 | y1 | 0.5760091308256071185311952831398 |
 | y2 | 0.6593374068771247209497232688591 |
 | miu | 0.8962150996380580103561896976316 |
+
+</div>
 
 <script src="{{ site.baseurl }}/assets/js/imageencryption/4.js"></script>
 
@@ -127,6 +143,8 @@ Modifications are made to make it more robust against two more cryptanalytic att
 
 ![Image Encryption Comparison](https://raw.githubusercontent.com/mcdulltii/mcdulltii.github.io/master/assets/img/imgenc/subs_0.png)
 
+<div class="extend-table">
+
 | Variables | Values |
 | :-- | --: |
 | xn | 2.5186675676171912 |
@@ -134,7 +152,11 @@ Modifications are made to make it more robust against two more cryptanalytic att
 | K | 704.2434846927956 |
 | N | 840 |
 
+</div>
+
 ![Image Encryption Comparison](https://raw.githubusercontent.com/mcdulltii/mcdulltii.github.io/master/assets/img/imgenc/subs_1.png)
+
+<div class="extend-table">
 
 | Variables | Values |
 | :-- | --: |
@@ -142,5 +164,7 @@ Modifications are made to make it more robust against two more cryptanalytic att
 | yn | 5.101480085089893 |
 | K | 483.88949085953874 |
 | N | 141 |
+
+</div>
 
 <script src="{{ site.baseurl }}/assets/js/imageencryption/5.js"></script>
