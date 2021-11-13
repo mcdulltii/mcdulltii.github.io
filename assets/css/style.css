@@ -182,6 +182,10 @@ hr.simple {
   margin-right:0;
 }
 
+.extend-table{
+  width: 100%;
+}
+
 .link{
   text-decoration: none;
 }
