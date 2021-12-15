@@ -6,11 +6,13 @@
   </head>
   <body>
 
-    {% include nav.html %}
+    <div id="navbar">
+      {% include nav.html %}
+    </div>
 
     <div class="container">
       <div id="fullpage">
-        <div class="section " id="section0">
+        <div class="section" id="section0">
           <h1 class="brand title center" id="type">{{ page.title | upcase | default: site.title | upcase}}</h1>
           <h3 class="center">{{ site.author }}</h3>
           <h5 class="center">{{ site.description | markdownify }}</h5>
@@ -32,7 +34,8 @@
       $(document).ready(function() {
         $('#fullpage').fullpage({
           autoScrolling:true,
-          scrollHorizontally: true,
+          // scrollHorizontally: true,
+          loopBottom: true,
           navigation: true,
           navigationPosition: 'right',
           navigationTooltips: ['About', '', ''],

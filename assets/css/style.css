@@ -99,6 +99,10 @@ nav a:hover {
   text-decoration: underline;
 }
 
+#navbar {
+  position: relative;
+}
+
 h1.name {
   font-family: Moderne Sans, sans-serif;
   text-align: center;
@@ -556,6 +560,13 @@ and (min-device-width : 800px)  {
   }
   p > code {
     display: initial;
+  }
+  #navbar {
+    position: fixed;
+    z-index: 99;
+    top: 2%;
+    left: 0;
+    right: 0;
   }
   #canvas {
     left: 25%;
