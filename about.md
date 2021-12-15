@@ -4,12 +4,23 @@ title: About
 permalink: /about/
 ---
 
+
+<div class="section" id="section1" markdown="1">
+
+# [Link to Résumé](https://github.com/mcdulltii/Resume/raw/master/resume.pdf)
+
+---
+
 # 2021
 
 - Learn Scala, Kotlin, Swift, etc.
 - 1st Runner-up in DSTA CDDC 2021 (BrainHack [Certificate]({{ site.baseurl }}/assets/img/BrainHacks_Aaron.opencert))
 - Created 2 [RE challenges](https://github.com/mcdulltii/coding/tree/master/CTFSG_RE) for CTFSGCTF: [Circuit Breaker](https://github.com/mcdulltii/coding/raw/master/CTFSG_RE/CircuitBreaker) & [Fries and Ice Cream](https://github.com/mcdulltii/coding/raw/master/CTFSG_RE/FriesandIceCream)
 - Took a reverse-engineering course by Kaspersky ([Targeted Malware Analysis](https://xtraining.kaspersky.com/courses/targeted-malware-reverse-engineering))
+
+</div>
+
+<div class="section" id="section2" markdown="1">
 
 # 2020
 
@@ -27,3 +38,5 @@ permalink: /about/
 - Did shaders in Processing, p5.js and THREE.js
 - Started on computer renderings with abstract 3D models
 - [Previous Portfolio Site](https://mcdullti.github.io/homepage)
+
+</div>
