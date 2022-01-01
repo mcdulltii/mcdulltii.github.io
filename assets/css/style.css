@@ -63,15 +63,9 @@ p::selection{
 }
 
 header {
-  display: flex !important;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin-top: 20%;
-  background: url('https://github.com/mcdulltii/mcdulltii.github.io/raw/master/assets/img/banner.png');
-  background-repeat: no-repeat;
-  background-size: 100% 95%;
-  font-family: Times New Roman, sans-serif;
+  position: fixed;
+  width: 100%;
+  text-align: center;
   color: black;
 }
 
@@ -79,9 +73,24 @@ table{
   width: 100%;
 }
 
+div#comment {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+div#comment h2 {
+  font-family: Century Schoolbook, Century Schoolbook L, Georgia, serif;
+  font-size: 6vmin;
+  text-align: center;
+  margin: 2rem 3rem 0;
+  color: #fff;
+  font-weight: 100;
+}
+
 nav a {
   text-decoration: none;
-  font-size: 1.3em;
   color: inherit;
   padding: 1rem;
 }
@@ -95,8 +104,9 @@ nav a:hover {
 }
 
 h1.name {
+  font-family: Moderne Sans, sans-serif;
   text-align: center;
-  font-size: 6em;
+  font-size: 4em;
   width: 100%;
   letter-spacing: .5rem;
 }
@@ -563,5 +573,8 @@ and (min-device-width : 800px)  {
   }
   #mobile {
     display: inline !important;
+  }
+  div#comment h2 {
+    mix-blend-mode: overlay;
   }
 }
