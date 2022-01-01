@@ -11,10 +11,16 @@ permalink: /about/
 
 ---
 
+# 2022
+
+- Learn Q#, Qiskit, etc.
+- Took a malware analysis course by Kaspersky ([Advanced Malware Analysis](https://xtraining.kaspersky.com/courses/advanced-malware-analysis-techniques))
+
 # 2021
 
-- Learn Scala, Kotlin, Swift, etc.
+- Learn Scala, Kotlin, Swift, R, etc.
 - 1st Runner-up in DSTA CDDC 2021 (BrainHack [Certificate]({{ site.baseurl }}/assets/img/BrainHacks_Aaron.opencert))
+- Expanded on binary exploitation and malware writing using evasive and obfuscation techniques
 - Created 2 [RE challenges](https://github.com/mcdulltii/coding/tree/master/CTFSG_RE) for CTFSGCTF: [Circuit Breaker](https://github.com/mcdulltii/coding/raw/master/CTFSG_RE/CircuitBreaker) & [Fries and Ice Cream](https://github.com/mcdulltii/coding/raw/master/CTFSG_RE/FriesandIceCream)
 - Took a reverse-engineering course by Kaspersky ([Targeted Malware Analysis](https://xtraining.kaspersky.com/courses/targeted-malware-reverse-engineering))
 
