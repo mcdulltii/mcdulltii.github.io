@@ -68,10 +68,9 @@ header {
   align-items: center;
   justify-content: center;
   margin-top: 20%;
-  background: url('https://raw.githubusercontent.com/mcdulltii/mcdulltii.github.io/master/assets/img/banner.png');
-  background-position: center;
+  background: url('https://github.com/mcdulltii/mcdulltii.github.io/raw/master/assets/img/banner.png');
   background-repeat: no-repeat;
-  background-size: 50% 100%;
+  background-size: 100% 95%;
   font-family: Times New Roman, sans-serif;
   color: black;
 }
