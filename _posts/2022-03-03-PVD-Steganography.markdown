@@ -26,7 +26,7 @@ After generating/importing a suitable cover image, the bitmap is partitioned int
 
 Then, per byte of the string we want to embed, randomly choose non-repeating blocks from the previous partition. For each embedded byte, classify its bits to determine whether a smaller sized block is enough to embed them (Whether it is `2 x 2` or `3 x 3`).
 
-```C
+```c
 int classify(int pixel_value_difference) {
     int nbits = 0;
     if (pixel_value_difference < 16) {
@@ -42,7 +42,7 @@ int classify(int pixel_value_difference) {
 
 These bits are then embedded by bit flipping the least significant bits of chosen colour components of the colour pixels within the partitioned blocks.
 
-```C
+```c
 int embed_bits(...) {
     // Classify number of pixels required to embed
     int nbits = classify(pixel_value_difference);
@@ -58,7 +58,7 @@ int embed_bits(...) {
 
 The above steps mentioned many random choices, which should not be easily replicated. In this project, I have chosen to log these choices in terms of concatenated bits. This thus makes the steganography system only extractable by those who know the logging system.
 
-```C
+```c
 switch (pixel) {
     case 'r':
         sequence[0] = '0';
@@ -113,7 +113,7 @@ fprintf(logfile_ptr, "%d %d %d \n", i, j, bin_to_char(sequence));
 
 This steganography scheme is symmetrical, so reversing the embedding steps will result back to our original string.
 
-```Python
+```python
 # Foreach line in log file
 each_line = logfile_ptr.readline()
 
