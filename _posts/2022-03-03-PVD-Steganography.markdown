@@ -20,7 +20,7 @@ A cover image is partitioned into non-overlapping blocks of size `1 × 2` in
 
 Instead of grey-level images, a colour image steganographic scheme is proposed. By decomposing each colour pixel into its corresponding colour components, i.e. R, G and B, any small change to one of its components will not affect the overall colour when the pixel is blended in with its surrounding pixels.
 
-In this proposed steganography scheme, bytes, or strings in this case are converted into bits, and then embedded onto the least significant bits (LSB) of pixel RGB components. By using the least significant bits, this bit flip is essentially `±1`.
+In this proposed steganography scheme, bytes, or strings in this case are converted into bits, and then embedded onto the least significant bits (LSB) of pixel RGB components. By using the least significant bits, this bit flip is essentially an absolute difference of 1.
 
 After generating/importing a suitable cover image, the bitmap is partitioned into non-overlapping blocks of `3 x 3` in raster scan order.
 
