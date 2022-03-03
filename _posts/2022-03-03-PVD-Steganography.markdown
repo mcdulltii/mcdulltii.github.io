@@ -26,8 +26,107 @@ After generating/importing a suitable cover image, the bitmap is partitioned int
 
 Then, per byte of the string we want to embed, randomly choose non-repeating blocks from the previous partition. For each embedded byte, classify its bits to determine whether a smaller sized block is enough to embed them (Whether it is `2 x 2` or `3 x 3`).
 
+```C
+int classify(int pixel_value_difference) {
+    int nbits = 0;
+    if (pixel_value_difference < 16) {
+        nbits = 2;
+    } else if (pixel_value_difference > 16 && pixel_value_difference < 32) {
+        nbits = 3;
+    } else {
+        nbits = 4;
+    }
+    return nbits;
+}
+```
+
 These bits are then embedded by bit flipping the least significant bits of chosen colour components of the colour pixels within the partitioned blocks.
 
-The above steps mentioned many random choices, which should not be easily replicated. In this project, I have chosen to log these choices in terms of concatenated bits. This thus makes the steganography system only extractable by those who know the logging system. This steganography scheme is symmetrical, so reversing the embedding steps will result back to our original string.
+```C
+int embed_bits(...) {
+    // Classify number of pixels required to embed
+    int nbits = classify(pixel_value_difference);
+
+    // Compare classification and number of bits from string to be embedded
+    if (nbits < strlen(bits)) {
+        // Embed on the LSB of chosen colour component
+    } else {
+        // Pad chosen colour component to fit number of bits
+    }
+}
+```
+
+The above steps mentioned many random choices, which should not be easily replicated. In this project, I have chosen to log these choices in terms of concatenated bits. This thus makes the steganography system only extractable by those who know the logging system.
+
+```C
+switch (pixel) {
+    case 'r':
+        sequence[0] = '0';
+        sequence[1] = '0';
+        break;
+    case 'g':
+        sequence[0] = '0';
+        sequence[1] = '1';
+        break;
+    case 'b':
+        sequence[0] = '1';
+        sequence[1] = '0';
+        break;
+}
+
+switch (pixel_value_difference) {
+    case 2:
+        sequence[2] = '0';
+        sequence[3] = '0';
+        break;
+    case 3:
+        sequence[2] = '0';
+        sequence[3] = '1';
+        break;
+    case 4:
+        sequence[2] = '1';
+        sequence[3] = '0';
+        break;
+}
+
+switch (padding) {
+    case 0:
+        sequence[4] = '0';
+        sequence[5] = '0';
+        break;
+    case 1:
+        sequence[4] = '0';
+        sequence[5] = '1';
+        break;
+    case 2:
+        sequence[4] = '1';
+        sequence[5] = '0';
+        break;
+    case 3:
+        sequence[4] = '1';
+        sequence[5] = '1';
+        break;
+}
+
+fprintf(logfile_ptr, "%d %d %d \n", i, j, bin_to_char(sequence));
+```
+
+This steganography scheme is symmetrical, so reversing the embedding steps will result back to our original string.
+
+```Python
+# Foreach line in log file
+each_line = logfile_ptr.readline()
+
+# i, j, sequence according to fprintf from above
+i, j, sequence = [int(i) for i in each_line.split()]
+
+# Convert int to bin, pad up to length 7, then split into 3 length-2 blocks
+pixel_index, pixel_value_difference_index, padding_index = [i for i in map(''.join, zip(*[iter(bin(sequence)[2:].zfill(7))]*2))]
+
+# Retrieve original configurations based on `00`, `01`, `10` or `11` indexes
+pixel, pixel_value_difference, padding = 'rgb'[int(pixel_index, 2)], int('234'[int(pixel_value_difference_index, 2)]), int('0123'[int(padding_index, 2)])
+```
+
+### Example
 
 ![Embedding and Extraction Example](https://raw.githubusercontent.com/mcdulltii/PVD-Steganography/main/rsrc/example.png)
