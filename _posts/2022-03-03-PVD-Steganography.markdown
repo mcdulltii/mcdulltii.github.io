@@ -24,45 +24,7 @@ In this proposed steganography scheme, bytes, or strings in this case are conver
 
 After generating/importing a suitable cover image, the bitmap is partitioned into non-overlapping blocks of `3 x 3` in raster scan order.
 
-<table>
-<tr><th>i.</th><th>ii.</th></tr>
-<tr><td>
-
-|1|-|-|...|
-|-|-|-|-|
-|-|2|-|...|
-|-|3|-|...|
-|...|...|...|...|
-
-</td><td>
-
-|1|1|1|-|-|-|-|-|-|...|
-|-|-|-|-|-|-|-|-|-|-|
-|1|1|1|-|-|-|-|-|-|...|
-|1|1|1|-|-|-|-|-|-|...|
-|-|-|-|2|2|2|-|-|-|...|
-|-|-|-|2|2|2|-|-|-|...|
-|-|-|-|2|2|2|-|-|-|...|
-|-|-|-|3|3|3|-|-|-|...|
-|-|-|-|3|3|3|-|-|-|...|
-|-|-|-|3|3|3|-|-|-|...|
-|...|...|...|...|...|...|...|...|...|...|
-
-</td></tr> </table>
-
 Then, per byte of the string we want to embed, randomly choose non-repeating blocks from the previous partition. For each embedded byte, classify its bits to determine whether a smaller sized block is enough to embed them (Whether it is `2 x 2` or `3 x 3`).
-
-|x|x|x|-|-|-|-|-|-|...|
-|-|-|-|-|-|-|-|-|-|-|
-|x|x|x|-|-|-|-|-|-|...|
-|x|x|x|-|-|-|-|-|-|...|
-|-|-|-|x|x|-|-|-|-|...|
-|-|-|-|x|x|-|-|-|-|...|
-|-|-|-|-|-|-|-|-|-|...|
-|-|-|-|x|x|x|-|-|-|...|
-|-|-|-|x|x|x|-|-|-|...|
-|-|-|-|x|x|x|-|-|-|...|
-|...|...|...|...|...|...|...|...|...|...|
 
 These bits are then embedded by bit flipping the least significant bits of chosen colour components of the colour pixels within the partitioned blocks.
 
