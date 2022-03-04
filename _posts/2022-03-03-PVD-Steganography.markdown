@@ -127,6 +127,10 @@ pixel_index, pixel_value_difference_index, padding_index = [i for i in map(''.jo
 pixel, pixel_value_difference, padding = 'rgb'[int(pixel_index, 2)], int('234'[int(pixel_value_difference_index, 2)]), int('0123'[int(padding_index, 2)])
 ```
 
-### Example
+### Examples
 
 ![Embedding and Extraction Example](https://raw.githubusercontent.com/mcdulltii/PVD-Steganography/main/rsrc/example.png)
+
+![Lena Example](https://raw.githubusercontent.com/mcdulltii/PVD-Steganography/main/rsrc/comparison_hist.png)
+
+From the above images, though the string embedded can be considered small, the RGB components are indistinguishable from their original cover images.
