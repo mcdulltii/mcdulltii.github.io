@@ -569,7 +569,7 @@ and (min-device-width : 800px)  {
     right: 0;
   }
   #canvas {
-    left: 25%;
+    left: 30%;
   }
   #mobile {
     display: inline !important;
