@@ -14,7 +14,7 @@ permalink: /about/
 # 2022
 
 - Learn Q#, Qiskit, etc.
-- 1st place in NUS GreyCTF 2022 organized by [NUS Greyhats](https://nusgreyhats.org/)
+- 1st place in NUS GreyCTF 2022 (organized by [NUS Greyhats](https://nusgreyhats.org/))
 - Released IDA [obfDetect plugin](https://github.com/mcdulltii/obfDetect)
 - Applying my knowledge on evasive and obfuscation techniques to writing a <i>closed-source</i> assembly obfuscator
 - Created 3 [RE challenges](https://github.com/mcdulltii/coding/tree/master/CTFSG_RE) for CTFSGCTF: [Disappointment](https://github.com/mcdulltii/coding/raw/master/CTFSG_RE/calc.exe) & [Wordle](https://github.com/mcdulltii/coding/raw/master/CTFSG_RE/wordle.exe) & [Work From Home](https://github.com/mcdulltii/coding/blob/master/CTFSG_RE/WFH/re)
