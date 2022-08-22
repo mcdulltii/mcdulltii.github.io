@@ -14,7 +14,10 @@ permalink: /about/
 # 2022
 
 - Learn Q#, Qiskit, etc.
+- Matriculated into [Bachelor of Science, Computing Science](https://www.singaporetech.edu.sg/undergraduate-programmes/computing-science), a three-year direct honours degree programme jointly offered by SIT and the University of Glasgow
+- Created 1 RE challenge for [TISC](https://www.csit.gov.sg/events/tisc/tisc-2022) (Writeup and source will be added afterwards)
 - 1st place in NUS GreyCTF 2022 (organized by [NUS Greyhats](https://nusgreyhats.org/))
+- Implemented [Pixel Value Differencing based Steganography](https://github.com/mcdulltii/PVD-Steganography) to embed secrets in pixels' Least Significant Bits (LSB)
 - Released IDA [obfDetect plugin](https://github.com/mcdulltii/obfDetect)
 - Applying my knowledge on evasive and obfuscation techniques to writing a <i>closed-source</i> assembly obfuscator
 - Created 3 [RE challenges](https://github.com/mcdulltii/coding/tree/master/CTFSG_RE) for CTFSGCTF: [Disappointment](https://github.com/mcdulltii/coding/raw/master/CTFSG_RE/calc.exe) & [Wordle](https://github.com/mcdulltii/coding/raw/master/CTFSG_RE/wordle.exe) & [Work From Home](https://github.com/mcdulltii/coding/blob/master/CTFSG_RE/WFH/re)
