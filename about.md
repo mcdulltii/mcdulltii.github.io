@@ -23,6 +23,10 @@ permalink: /about/
 - Created 3 [RE challenges](https://github.com/mcdulltii/coding/tree/master/CTFSG_RE) for CTFSGCTF: [Disappointment](https://github.com/mcdulltii/coding/raw/master/CTFSG_RE/calc.exe) & [Wordle](https://github.com/mcdulltii/coding/raw/master/CTFSG_RE/wordle.exe) & [Work From Home](https://github.com/mcdulltii/coding/blob/master/CTFSG_RE/WFH/re)
 - Took a malware analysis course by Kaspersky ([Advanced Malware Analysis](https://xtraining.kaspersky.com/courses/advanced-malware-analysis-techniques))
 
+</div>
+
+<div class="section" id="section2" markdown="1">
+
 # 2021
 
 - Learn Scala, Kotlin, Swift, R, etc.
@@ -30,10 +34,6 @@ permalink: /about/
 - Expanded on binary exploitation and malware writing using evasive and obfuscation techniques
 - Created 2 [RE challenges](https://github.com/mcdulltii/coding/tree/master/CTFSG_RE) for CTFSGCTF: [Circuit Breaker](https://github.com/mcdulltii/coding/raw/master/CTFSG_RE/CircuitBreaker) & [Fries and Ice Cream](https://github.com/mcdulltii/coding/raw/master/CTFSG_RE/FriesandIceCream)
 - Took a reverse-engineering course by Kaspersky ([Targeted Malware Analysis](https://xtraining.kaspersky.com/courses/targeted-malware-reverse-engineering))
-
-</div>
-
-<div class="section" id="section2" markdown="1">
 
 # 2020
 
@@ -44,6 +44,10 @@ permalink: /about/
 - Expanded on computer renderings with realistic 3D models and textures, including animations and motion tracking
 - Participating in several CTF competitions with 2 CTF teams, (CTFSG and ducks0ci3ty)
 - Studied SLAE, starting on OSCP in the future
+
+</div>
+
+<div class="section" id="section3" markdown="1">
 
 # 2018 - 2019
 
