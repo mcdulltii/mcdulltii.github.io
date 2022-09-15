@@ -15,7 +15,7 @@ permalink: /about/
 
 - Learn Q#, Qiskit, etc.
 - Matriculated into [Bachelor of Science, Computing Science](https://www.singaporetech.edu.sg/undergraduate-programmes/computing-science), a three-year direct honours degree programme jointly offered by SIT and the University of Glasgow
-- Created 1 RE challenge for [TISC](https://www.csit.gov.sg/events/tisc/tisc-2022) (Writeup and source will be added afterwards)
+- Created 1 RE challenge for [TISC](https://www.csit.gov.sg/events/tisc/tisc-2022) ([Creator Badge](https://api.badgr.io/public/assertions/tjHiVOw2S6-pEuIzO57S9g)): [Morbed, Morphed, Morbed](https://github.com/mcdulltii/polymetamorphism)
 - 1st place in NUS GreyCTF 2022 (organized by [NUS Greyhats](https://nusgreyhats.org/))
 - Implemented [Pixel Value Differencing based Steganography](https://github.com/mcdulltii/PVD-Steganography) to embed secrets in pixels' Least Significant Bits (LSB)
 - Released IDA [obfDetect plugin](https://github.com/mcdulltii/obfDetect)
