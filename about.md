@@ -14,6 +14,7 @@ permalink: /about/
 # 2022
 
 - Learn Q#, Qiskit, Semgrep etc.
+- 1st place in N0H4TS [Cyber League](https://cyberleague.co/) 2022 (organized by [Div0](https://www.div0.sg/))
 - Assisted GuardRails in DevSecOps through Semgrep to quickly find and prevent security issues in various technologies
 - Matriculated into [Bachelor of Science, Computing Science](https://www.singaporetech.edu.sg/undergraduate-programmes/computing-science), a three-year direct honours degree programme jointly offered by SIT and the University of Glasgow
 - Created 1 RE challenge for [TISC](https://www.csit.gov.sg/events/tisc/tisc-2022) ([Creator Badge](https://api.badgr.io/public/assertions/tjHiVOw2S6-pEuIzO57S9g)): [Morbed, Morphed, Morbed](https://github.com/mcdulltii/polymetamorphism)
