@@ -15,6 +15,11 @@
         <div class="section" id="section0">
           <h1 class="brand title center" id="type">{{ page.title | upcase | default: site.title | upcase}}</h1>
           <h3 class="center">{{ site.author }}</h3>
+          <p class="center">
+            <button onclick="window.open('https://github.com/mcdulltii/Resume/raw/master/resume.pdf', '_blank');">
+              <i class="fa fa-download"></i> Résumé
+            </button>
+          </p>
           <h5 class="center">{{ site.description | markdownify }}</h5>
           <hr/>
           <p class="tagline center">{{ site.tagline }}</p>

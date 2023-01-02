@@ -7,10 +7,6 @@ permalink: /about/
 
 <div class="section" id="section1" markdown="1">
 
-# [Link to Résumé](https://github.com/mcdulltii/Resume/raw/master/resume.pdf)
-
----
-
 # 2022
 
 - Learn Q#, Qiskit, Semgrep etc.
