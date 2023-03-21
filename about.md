@@ -7,6 +7,14 @@ permalink: /about/
 
 <div class="section" id="section1" markdown="1">
 
+# 2023
+
+- Took a reverse-engineering course by Kaspersky ([Reverse Engineering 101](https://kaspersky-xtraining.com/course/bootcamp-101)) ([Certificate]({{ site.baseurl }}/assets/img/certificate-reverse-engineering-101.pdf))
+
+</div>
+
+<div class="section" id="section2" markdown="1">
+
 # 2022
 
 - Learn Q#, Qiskit, Semgrep etc.
@@ -23,7 +31,7 @@ permalink: /about/
 
 </div>
 
-<div class="section" id="section2" markdown="1">
+<div class="section" id="section3" markdown="1">
 
 # 2021
 
@@ -45,7 +53,7 @@ permalink: /about/
 
 </div>
 
-<div class="section" id="section3" markdown="1">
+<div class="section" id="section4" markdown="1">
 
 # 2018 - 2019
 
