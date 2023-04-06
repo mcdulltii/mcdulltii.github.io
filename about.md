@@ -9,6 +9,7 @@ permalink: /about/
 
 # 2023
 
+- Solved CSIT [Mini Challenge](https://www.csit-events.sg/easter-egg-challenge23) ([Badge]({{ site.baseurl }}/assets/img/csit-easter-challenge-2023.png))
 - Took a reverse-engineering course by Kaspersky ([Reverse Engineering 101](https://kaspersky-xtraining.com/course/bootcamp-101)) ([Certificate]({{ site.baseurl }}/assets/img/certificate-reverse-engineering-101.pdf))
 
 </div>
