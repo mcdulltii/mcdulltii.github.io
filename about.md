@@ -9,6 +9,9 @@ permalink: /about/
 
 # 2023
 
+- Learn V, Dafny, etc.
+- Assisting in a stereo camera calibration project using Matlab and OpenCV
+- Participated in NUS GreyCTF 2023 (organized by [NUS Greyhats](https://nusgreyhats.org/))
 - Solved CSIT [Mini Challenge](https://www.csit-events.sg/easter-egg-challenge23) ([Badge]({{ site.baseurl }}/assets/img/csit-easter-challenge-2023.png))
 - Took a reverse-engineering course by Kaspersky ([Reverse Engineering 101](https://xtraining.kaspersky.com/courses/reverse-engineering-101)) ([Certificate]({{ site.baseurl }}/assets/img/certificate-reverse-engineering-101.pdf))
 
@@ -18,7 +21,7 @@ permalink: /about/
 
 # 2022
 
-- Learn Q#, Qiskit, Semgrep etc.
+- Learn Q#, Qiskit, Semgrep, etc.
 - 1st place in N0H4TS [Cyber League](https://cyberleague.co/) 2022 (organized by [Div0](https://www.div0.sg/))
 - Assisted GuardRails in DevSecOps through Semgrep to quickly find and prevent security issues in various technologies
 - Matriculated into [Bachelor of Science, Computing Science](https://www.singaporetech.edu.sg/undergraduate-programmes/computing-science), a three-year direct honours degree programme jointly offered by SIT and the University of Glasgow
