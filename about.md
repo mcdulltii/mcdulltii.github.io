@@ -12,6 +12,7 @@ permalink: /about/
 - Learn V, Dafny, etc.
 - Assisting in a stereo camera calibration project using Matlab and OpenCV
 - Participated in NUS GreyCTF 2023 (organized by [NUS Greyhats](https://nusgreyhats.org/))
+- Participated in DSTA [BrainHack](https://www.dsta.gov.sg/brainhack) 2023 ([Certificate]({{ site.baseurl }}/assets/img/certificate-brainhack.opencert))
 - Solved CSIT [Mini Challenge](https://www.csit-events.sg/easter-egg-challenge23) ([Badge]({{ site.baseurl }}/assets/img/csit-easter-challenge-2023.png))
 - Took a reverse-engineering course by Kaspersky ([Reverse Engineering 101](https://xtraining.kaspersky.com/courses/reverse-engineering-101)) ([Certificate]({{ site.baseurl }}/assets/img/certificate-reverse-engineering-101.pdf))
 
