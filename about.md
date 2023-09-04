@@ -10,6 +10,8 @@ permalink: /about/
 # 2023
 
 - Learn V, Dafny, etc.
+- Took the VMWare Docker Fundamentals course ([Certificate]({{ site.baseurl }}/assets/img/course-completion-certificate.pdf))
+- Took the AWS Cloud Foundations course ([Certificate](https://www.credly.com/badges/c8b32580-16ec-4063-9503-15acd3b49a1c/))
 - Assisting in a stereo camera calibration project using Matlab and OpenCV
 - Participated in NUS GreyCTF 2023 (organized by [NUS Greyhats](https://nusgreyhats.org/))
 - Participated in DSTA [BrainHack](https://www.dsta.gov.sg/brainhack) 2023 ([Certificate]({{ site.baseurl }}/assets/img/certificate-brainhack.opencert))
