@@ -9,7 +9,7 @@ permalink: /about/
 
 # 2023
 
-- Learn V, Dafny, etc.
+- Learn V, Dafny, Kubernetes, etc.
 - Took the VMWare Kubernetes Fundamentals course ([Certificate]({{ site.baseurl }}/assets/img/kubernetes-course-completion-certificate.pdf))
 - Took the VMWare Docker Fundamentals course ([Certificate]({{ site.baseurl }}/assets/img/docker-course-completion-certificate.pdf))
 - Took the AWS Cloud Foundations course ([Certificate](https://www.credly.com/badges/c8b32580-16ec-4063-9503-15acd3b49a1c/))
@@ -51,7 +51,7 @@ permalink: /about/
 
 # 2020
 
-- Learn Python, C, C#, C++, Nim, Rust, Golang, Assembly, Web Frameworks, Unity, etc.
+- Learn Python, C, C#, C++, Nim, Rust, Golang, Assembly, Docker, Web Frameworks, Unity, etc.
 - Serving in Singapore Armed Forces as part of the Cyber Defence Group
 - Assisted Helloholo in VR and AR software research and development
 - Experimented with and created multi-platform binary exploits and malwares
