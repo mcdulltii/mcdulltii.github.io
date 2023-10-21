@@ -10,6 +10,7 @@ permalink: /about/
 # 2023
 
 - Learn V, Dafny, Kubernetes, etc.
+- Created 1 RE challenge for [TISC](https://www.csit.gov.sg/events/tisc) ([Creator Badge](https://api.badgr.io/public/assertions/4HTTY_x1TD-Ij-LgvbvOfw)): [4D Number Generator](https://github.com/mcdulltii/4d_generator)
 - Took the VMWare Kubernetes Fundamentals course ([Certificate]({{ site.baseurl }}/assets/img/kubernetes-course-completion-certificate.pdf))
 - Took the VMWare Docker Fundamentals course ([Certificate]({{ site.baseurl }}/assets/img/docker-course-completion-certificate.pdf))
 - Took the AWS Cloud Foundations course ([Certificate](https://www.credly.com/badges/c8b32580-16ec-4063-9503-15acd3b49a1c/))
@@ -29,7 +30,7 @@ permalink: /about/
 - 1st place in N0H4TS [Cyber League](https://cyberleague.co/) 2022 (organized by [Div0](https://www.div0.sg/))
 - Assisted GuardRails in DevSecOps through Semgrep to quickly find and prevent security issues in various technologies
 - Matriculated into [Bachelor of Science, Computing Science](https://www.singaporetech.edu.sg/undergraduate-programmes/computing-science), a three-year direct honours degree programme jointly offered by SIT and the University of Glasgow
-- Created 1 RE challenge for [TISC](https://www.csit.gov.sg/events/tisc/tisc-2022) ([Creator Badge](https://api.badgr.io/public/assertions/tjHiVOw2S6-pEuIzO57S9g)): [Morbed, Morphed, Morbed](https://github.com/mcdulltii/polymetamorphism)
+- Created 1 RE challenge for [TISC](https://www.csit.gov.sg/events/tisc) ([Creator Badge](https://api.badgr.io/public/assertions/tjHiVOw2S6-pEuIzO57S9g)): [Morbed, Morphed, Morbed](https://github.com/mcdulltii/polymetamorphism)
 - 1st place in NUS GreyCTF 2022 (organized by [NUS Greyhats](https://nusgreyhats.org/))
 - Implemented [Pixel Value Differencing based Steganography](https://github.com/mcdulltii/PVD-Steganography) to embed secrets in pixels' Least Significant Bits (LSB)
 - Released IDA [obfDetect plugin](https://github.com/mcdulltii/obfDetect)
