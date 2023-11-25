@@ -10,6 +10,7 @@ permalink: /about/
 # 2023
 
 - Learn V, Dafny, Kubernetes, etc.
+- Received the [Terra Systems Book Prize in Computer Networks](https://www.singaporetech.edu.sg/awards/terra-systems-book-prize-computer-networks) for achieving the top score in the Computer Networks module
 - Created 1 RE challenge for [TISC](https://www.csit.gov.sg/events/tisc) ([Creator Badge](https://api.badgr.io/public/assertions/4HTTY_x1TD-Ij-LgvbvOfw)): [4D Number Generator](https://github.com/mcdulltii/4d_generator)
 - Took the VMWare Kubernetes Fundamentals course ([Certificate]({{ site.baseurl }}/assets/img/kubernetes-course-completion-certificate.pdf))
 - Took the VMWare Docker Fundamentals course ([Certificate]({{ site.baseurl }}/assets/img/docker-course-completion-certificate.pdf))
