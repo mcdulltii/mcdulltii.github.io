@@ -80,7 +80,7 @@ website: https://github.com/mcdulltii/C-experiments
 
     Calculate address of value to overwrite, eg.
 
-    ```C
+    ```c
     void *add = (void*)ch;
     unsigned char *ins = (unsigned char*)add + 84;
     *ins = 0x24;
@@ -88,7 +88,7 @@ website: https://github.com/mcdulltii/C-experiments
 
     0x14 is overwritten as 0x24
 
-    ```C
+    ```c
     if (strlen(sr)==20) => if (strlen(sr)==36)
     ```
 
@@ -98,7 +98,7 @@ website: https://github.com/mcdulltii/C-experiments
 
     Primary process pipes its information (pid, address and length of string to overwrite) to secondary process
 
-    ```C
+    ```c
     int pipe1[2];
     int pipe2[2];
     int pipe3[2];
@@ -135,7 +135,7 @@ website: https://github.com/mcdulltii/C-experiments
 
     Secondary process to use pid to read /proc/{pid}/mem and overwrite string at given address and length
 
-    ```C
+    ```c
     strncpy(buf, new_string, *length_given);
     lseek(mem_file, *address, SEEK_SET);
     if (write(mem_file, buf, *length_given) == -1) {
@@ -146,7 +146,7 @@ website: https://github.com/mcdulltii/C-experiments
 
     Temporary string s is overwritten with flag (First string s != Second string s)
 
-    ```C
+    ```c
     printf("\nThe flag is \"%s\"!\n", s);
     puts("\nValidating......");
     sleep(1);
@@ -165,7 +165,7 @@ website: https://github.com/mcdulltii/C-experiments
 
 - Load function from struct function list
 
-    ```C
+    ```c
     // Struct to load function
     typedef struct functions{
         const char *function_name;
@@ -199,7 +199,7 @@ website: https://github.com/mcdulltii/C-experiments
 
 - Load function from self-created library
 
-    ```C
+    ```c
     // Pipe for loaded function
     struct S {
         string input, flag;
@@ -252,7 +252,7 @@ website: https://github.com/mcdulltii/C-experiments
 
 - Corrupt ELF headers, i.e. `e_shoff, e_shnum and e_shstrndx`
 
-    ```C
+    ```c
     static Elf64_Ehdr* header;
 
     header->e_shoff = 0xffff;

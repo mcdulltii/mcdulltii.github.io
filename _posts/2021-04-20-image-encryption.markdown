@@ -21,13 +21,15 @@ In the design of an encryption-decryption chaotic system, the key space for whic
 
 Disclaimer: All 5 algorithms implemented have been amended to fit RGB images. Decryption methods are reflective of the encryption methods.
 
+<hr/>
+
 #### <a name="ie-1"></a>Image encryption using q-deformed logistic map
 
 In [this paper](https://www.sciencedirect.com/science/article/pii/S0020025520311336), the proposed encryption method is applied to 8-bit images in which a q-deformed logistic (chaotic) map is used based on the characteristics of sensitivity to the initial conditions and pseudo-randomness. Using a q-deformation of the map, we increase the size of the key space instead of using a high-dimensional chaotic map. It is worth mentioning that a low-dimensional chaotic map has several advantages, including easy implementation and parallel processes in the generation of chaotic sequences. The additional parameter, q, increases the level of security through the key space. By contrast, the topological entropy of the chaotic q-deformed logistic system can be computed with a fixed accuracy, which means that we can select the parametric region that best suits our purposes.
 
 ![Proposed Cryptosystem](https://ars.els-cdn.com/content/image/1-s2.0-S0020025520311336-gr4_lrg.jpg)
 
-![Image Encryption Comparison](https://raw.githubusercontent.com/mcdulltii/mcdulltii.github.io/master/assets/img/imgenc/q.png)
+![Image Encryption Comparison]({{ site.baseurl }}/assets/img/imgenc/q.png)
 
 | Variables | Values |
 | :-- | --: |
@@ -44,7 +46,7 @@ In [this paper](https://www.sciencedirect.com/science/article/pii/S0020025520311
 | n2 | 84301 |
 | n3 | 90817 |
 
-<script src="{{ site.baseurl }}/assets/js/imageencryption/1.js"></script>
+<hr/>
 
 #### <a name="ie-2"></a>Image encryption using chaotic logistic map
 
@@ -52,7 +54,7 @@ As chaotic maps have many fundamental properties such as ergodicity, mixing prop
 
 <table><thead class="valign-top"><tr class="rowsep-1"><th scope="col">Group no.</th><th scope="col">Intervals of <em>Y</em> values</th><th scope="col">Operations for encryption/decryption</th></tr></thead><tbody><tr><td>1</td><td>0.10–0.13, 0.34–0.37, 0.58–0.62</td><td>NOT operation, i.e. invert the bits of all three RGB bytes</td></tr><tr><td>2</td><td>0.13–0.16, 0.37–0.40, 0.62–0.66</td><td><em>R</em>⊕<em>K</em><sub>4</sub>, <em>G</em>⊕<em>K</em><sub>5</sub> and <em>B</em>⊕<em>K</em><sub>6</sub></td></tr><tr><td class="valign-top" rowspan="4">3</td><td class="valign-top" rowspan="4">0.16–0.19, 0.40–0.43, 0.66–0.70</td><td>Encryption</td></tr><tr><td>((<em>R</em>)<sub>10</sub>+(<em>K</em><sub>4</sub>)<sub>10</sub>+(<em>K</em><sub>5</sub>)<sub>10</sub>) mod&nbsp;256, ((<em>G</em>)<sub>10</sub>+(<em>K</em><sub>5</sub>)<sub>10</sub>+(<em>K</em><sub>6</sub>)<sub>10</sub>) mod&nbsp;256, ((<em>B</em>)<sub>10</sub>+(<em>K</em><sub>6</sub>)<sub>10</sub>+(<em>K</em><sub>4</sub>)<sub>10</sub>) mod&nbsp;256</td></tr><tr><td>Decryption</td></tr><tr><td>((<em>R</em>)<sub>10</sub>+256−(<em>K</em><sub>4</sub>)<sub>10</sub>−(<em>K</em><sub>5</sub>)<sub>10</sub>), ((<em>G</em>)<sub>10</sub>+256−(<em>K</em><sub>5</sub>)<sub>10</sub>−(<em>K</em><sub>6</sub>)<sub>10</sub>), ((<em>B</em>)<sub>10</sub>+256−(<em>K</em><sub>6</sub>)<sub>10</sub>−(<em>K</em><sub>4</sub>)<sub>10</sub>)</td></tr><tr><td class="valign-top" rowspan="4">4</td><td class="valign-top" rowspan="4">0.19–0.22, 0.43–0.46, 0.70–0.74</td><td>Encryption</td></tr><tr><td><em>NOT</em>(<em>R</em>⊕<em>K</em><sub>4</sub>), <em>NOT</em>(<em>G</em>⊕<em>K</em><sub>5</sub>), <em>NOT</em>(<em>B</em>⊕<em>K</em><sub>6</sub>)</td></tr><tr><td>Decryption</td></tr><tr><td>(<em>NOT</em>(<em>R</em>))⊕<em>K</em><sub>4</sub>, (<em>NOT</em>(<em>G</em>))⊕<em>K</em><sub>5</sub>, (<em>NOT</em>(<em>B</em>))⊕<em>K</em><sub>6</sub></td></tr><tr><td class="valign-top">5</td><td class="valign-top">0.22–0.25, 0.46–0.49, 0.74–0.78</td><td>Similar to Group 2 except that <em>K</em><sub>7</sub>, <em>K</em><sub>8</sub> and <em>K</em><sub>9</sub> are used in lieu of <em>K</em><sub>4</sub>, <em>K</em><sub>5</sub> and <em>K</em><sub>6</sub>, respectively.</td></tr><tr><td class="valign-top">6</td><td class="valign-top">0.25–0.28, 0.49–0.52, 0.78–0.82</td><td>Similar to Group 3 except that <em>K</em><sub>7</sub>, <em>K</em><sub>8</sub> and <em>K</em><sub>9</sub> are used in lieu of <em>K</em><sub>4</sub>, <em>K</em><sub>5</sub> and <em>K</em><sub>6</sub>, respectively.</td></tr><tr><td class="valign-top">7</td><td class="valign-top">0.28–0.31, 0.52–0.55, 0.82–0.86</td><td>Similar to Group 4 except that <em>K</em><sub>7</sub>, <em>K</em><sub>8</sub> and <em>K</em><sub>9</sub> are used in lieu of <em>K</em><sub>4</sub>, <em>K</em><sub>5</sub> and <em>K</em><sub>6</sub>, respectively.</td></tr><tr><td class="valign-top">8</td><td class="valign-top">0.31–0.34, 0.55–0.58, 0.86–0.90</td><td>No operations are made on <em>R</em>,<em>G</em> and <em>B</em> bytes</td></tr></tbody></table>
 
-![Image Encryption Comparison](https://raw.githubusercontent.com/mcdulltii/mcdulltii.github.io/master/assets/img/imgenc/log.png)
+![Image Encryption Comparison]({{ site.baseurl }}/assets/img/imgenc/log.png)
 
 | Variables | Values |
 | :-- | --: |
@@ -63,7 +65,7 @@ As chaotic maps have many fundamental properties such as ergodicity, mixing prop
 | grouplist | [4, 5, 6, 6, 6, 3, 0, 1, 0, 3, 2, 3, 7, 5, 7, 4, 2, 1, 0, 5, 7, 4, 2, 1] |
 | k | ['1111', '0110', '1000', '0111', '0000', '0010', '0010', '0010', '0111', '0001', '0100', '0101', '0101', '1100', '1000', '0111', '1100', '0111', '0011', '1001'] |
 
-<script src="{{ site.baseurl }}/assets/js/imageencryption/2.js"></script>
+<hr/>
 
 #### <a name="ie-3"></a>Multiple grayscale image encryption using cross-coupled chaotic maps
 
@@ -77,7 +79,7 @@ The two important features for selecting any chaotic map in image encryption are
 
 ![Proposed Cryptosystem](https://ars.els-cdn.com/content/image/1-s2.0-S2214212619308270-gr4_lrg.jpg)
 
-![Image Encryption Comparison](https://raw.githubusercontent.com/mcdulltii/mcdulltii.github.io/master/assets/img/imgenc/cross.png)
+![Image Encryption Comparison]({{ site.baseurl }}/assets/img/imgenc/cross.png)
 
 | Variables | Values |
 | :-- | --: |
@@ -87,7 +89,7 @@ The two important features for selecting any chaotic map in image encryption are
 | yx | 0.6365662408360173 |
 | hsh | 56c85fdb591c89abbb61bdb631070202394d5fd5c144daff1303f413351b3a37 |
 
-<script src="{{ site.baseurl }}/assets/js/imageencryption/3.js"></script>
+<hr/>
 
 #### <a name="ie-4"></a>Colour byte scrambling technique for efficient image encryption based on combined chaotic map
 
@@ -95,7 +97,7 @@ In [this paper](https://ieeexplore.ieee.org/document/7754851), an image encrypti
 
 ![Proposed Cryptosystem](https://ieeexplore.ieee.org/mediastore_new/IEEE/content/media/7731602/7754737/7754851/7754851-fig-5-source-large.gif)
 
-![Image Encryption Comparison](https://raw.githubusercontent.com/mcdulltii/mcdulltii.github.io/master/assets/img/imgenc/byte.png)
+![Image Encryption Comparison]({{ site.baseurl }}/assets/img/imgenc/byte.png)
 
 | Variables | Values |
 | :-- | --: |
@@ -111,7 +113,7 @@ In [this paper](https://ieeexplore.ieee.org/document/7754851), an image encrypti
 | y2 | 0.6593374068771247209497232688591 |
 | miu | 0.8962150996380580103561896976316 |
 
-<script src="{{ site.baseurl }}/assets/js/imageencryption/4.js"></script>
+<hr/>
 
 #### <a name="ie-5"></a>Modified substitution–diffusion image cipher using chaotic standard and logistic maps
 
@@ -125,7 +127,7 @@ Modifications are made to make it more robust against two more cryptanalytic att
 
 ![Modified Cryptosystem](https://ars.els-cdn.com/content/image/1-s2.0-S100757040900598X-gr3.jpg)
 
-![Image Encryption Comparison](https://raw.githubusercontent.com/mcdulltii/mcdulltii.github.io/master/assets/img/imgenc/subs_0.png)
+![Image Encryption Comparison]({{ site.baseurl }}/assets/img/imgenc/subs_0.png)
 
 | Variables | Values |
 | :-- | --: |
@@ -134,7 +136,7 @@ Modifications are made to make it more robust against two more cryptanalytic att
 | K | 704.2434846927956 |
 | N | 840 |
 
-![Image Encryption Comparison](https://raw.githubusercontent.com/mcdulltii/mcdulltii.github.io/master/assets/img/imgenc/subs_1.png)
+![Image Encryption Comparison]({{ site.baseurl }}/assets/img/imgenc/subs_1.png)
 
 | Variables | Values |
 | :-- | --: |
@@ -142,5 +144,3 @@ Modifications are made to make it more robust against two more cryptanalytic att
 | yn | 5.101480085089893 |
 | K | 483.88949085953874 |
 | N | 141 |
-
-<script src="{{ site.baseurl }}/assets/js/imageencryption/5.js"></script>
