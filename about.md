@@ -7,6 +7,12 @@ permalink: /about/
 
 <div class="section" id="section1" markdown="1">
 
+# 2024
+
+- Solved CSIT Mini Challenge ([Badge]({{ site.baseurl }}/assets/img/csit-cny-challenge-2024.png))
+
+<div class="section" id="section2" markdown="1">
+
 # 2023
 
 - Learn V, Dafny, Kubernetes, etc.
@@ -18,12 +24,12 @@ permalink: /about/
 - Assisting in a stereo camera calibration project using Matlab and OpenCV
 - Participated in NUS GreyCTF 2023 (organized by [NUS Greyhats](https://nusgreyhats.org/))
 - Participated in DSTA [BrainHack](https://www.dsta.gov.sg/brainhack) 2023 ([Certificate]({{ site.baseurl }}/assets/img/certificate-brainhack.opencert))
-- Solved CSIT [Mini Challenge](https://www.csit-events.sg/easter-egg-challenge23) ([Badge]({{ site.baseurl }}/assets/img/csit-easter-challenge-2023.png))
+- Solved CSIT Mini Challenge ([Badge]({{ site.baseurl }}/assets/img/csit-easter-challenge-2023.png))
 - Took a reverse-engineering course by Kaspersky ([Reverse Engineering 101](https://xtraining.kaspersky.com/courses/reverse-engineering-101)) ([Certificate]({{ site.baseurl }}/assets/img/certificate-reverse-engineering-101.pdf))
 
 </div>
 
-<div class="section" id="section2" markdown="1">
+<div class="section" id="section3" markdown="1">
 
 # 2022
 
@@ -41,7 +47,7 @@ permalink: /about/
 
 </div>
 
-<div class="section" id="section3" markdown="1">
+<div class="section" id="section4" markdown="1">
 
 # 2021
 
@@ -63,7 +69,7 @@ permalink: /about/
 
 </div>
 
-<div class="section" id="section4" markdown="1">
+<div class="section" id="section5" markdown="1">
 
 # 2018 - 2019
 
