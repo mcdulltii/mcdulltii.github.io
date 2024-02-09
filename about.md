@@ -11,6 +11,8 @@ permalink: /about/
 
 - Solved CSIT Mini Challenge ([Badge]({{ site.baseurl }}/assets/img/csit-cny-challenge-2024.png))
 
+</div>
+
 <div class="section" id="section2" markdown="1">
 
 # 2023
