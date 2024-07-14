@@ -9,6 +9,8 @@ permalink: /about/
 
 # 2024
 
+- Learn Vision-based AI, etc.
+- Interned at watchTowr as a Cyber Security Engineer to assist in automating continuous assurance and adversary sight
 - Solved CSIT Mini Challenge ([Badge]({{ site.baseurl }}/assets/img/csit-cny-challenge-2024.png))
 
 </div>
@@ -23,7 +25,7 @@ permalink: /about/
 - Took the VMWare Kubernetes Fundamentals course ([Certificate]({{ site.baseurl }}/assets/img/kubernetes-course-completion-certificate.pdf))
 - Took the VMWare Docker Fundamentals course ([Certificate]({{ site.baseurl }}/assets/img/docker-course-completion-certificate.pdf))
 - Took the AWS Cloud Foundations course ([Certificate](https://www.credly.com/badges/c8b32580-16ec-4063-9503-15acd3b49a1c/))
-- Assisting in a stereo camera calibration project using Matlab and OpenCV
+- Contributed to a badminton AI robot project using Matlab, OpenCV, YOLOv8 and ROS 2
 - Participated in NUS GreyCTF 2023 (organized by [NUS Greyhats](https://nusgreyhats.org/))
 - Participated in DSTA [BrainHack](https://www.dsta.gov.sg/brainhack) 2023 ([Certificate]({{ site.baseurl }}/assets/img/certificate-brainhack.opencert))
 - Solved CSIT Mini Challenge ([Badge]({{ site.baseurl }}/assets/img/csit-easter-challenge-2023.png))
@@ -37,13 +39,11 @@ permalink: /about/
 
 - Learn Q#, Qiskit, Semgrep, etc.
 - 1st place in N0H4TS [Cyber League](https://cyberleague.co/) 2022 (organized by [Div0](https://www.div0.sg/))
-- Assisted GuardRails in DevSecOps through Semgrep to quickly find and prevent security issues in various technologies
+- Interned at GuardRails in DevSecOps through Semgrep to quickly find and prevent security issues in various technologies
 - Matriculated into [Bachelor of Science, Computing Science](https://www.singaporetech.edu.sg/undergraduate-programmes/computing-science), a three-year direct honours degree programme jointly offered by SIT and the University of Glasgow
 - Created 1 RE challenge for [TISC](https://www.csit.gov.sg/events/tisc) ([Creator Badge](https://api.badgr.io/public/assertions/tjHiVOw2S6-pEuIzO57S9g)): [Morbed, Morphed, Morbed](https://github.com/mcdulltii/polymetamorphism)
 - 1st place in NUS GreyCTF 2022 (organized by [NUS Greyhats](https://nusgreyhats.org/))
-- Implemented [Pixel Value Differencing based Steganography](https://github.com/mcdulltii/PVD-Steganography) to embed secrets in pixels' Least Significant Bits (LSB)
 - Released IDA [obfDetect plugin](https://github.com/mcdulltii/obfDetect)
-- Applying my knowledge on evasive and obfuscation techniques to writing a <i>closed-source</i> assembly obfuscator
 - Created 3 [RE challenges](https://github.com/mcdulltii/coding/tree/master/CTFSG_RE) for CTFSGCTF: [Disappointment](https://github.com/mcdulltii/coding/raw/master/CTFSG_RE/calc.exe) & [Wordle](https://github.com/mcdulltii/coding/raw/master/CTFSG_RE/wordle.exe) & [Work From Home](https://github.com/mcdulltii/coding/blob/master/CTFSG_RE/WFH/re)
 - Took a malware analysis course by Kaspersky ([Advanced Malware Analysis](https://xtraining.kaspersky.com/courses/advanced-malware-analysis-techniques))
 
@@ -55,7 +55,6 @@ permalink: /about/
 
 - Learn Scala, Kotlin, Swift, R, etc.
 - 1st Runner-up in DSTA CDDC 2021 (BrainHack [Certificate]({{ site.baseurl }}/assets/img/BrainHacks_Aaron.opencert))
-- Expanded on binary exploitation and malware writing using evasive and obfuscation techniques
 - Created 2 [RE challenges](https://github.com/mcdulltii/coding/tree/master/CTFSG_RE) for CTFSGCTF: [Circuit Breaker](https://github.com/mcdulltii/coding/raw/master/CTFSG_RE/CircuitBreaker) & [Fries and Ice Cream](https://github.com/mcdulltii/coding/raw/master/CTFSG_RE/FriesandIceCream)
 - Took a reverse-engineering course by Kaspersky ([Targeted Malware Analysis](https://xtraining.kaspersky.com/courses/targeted-malware-reverse-engineering))
 
@@ -63,11 +62,8 @@ permalink: /about/
 
 - Learn Python, C, C#, C++, Nim, Rust, Golang, Assembly, Docker, Web Frameworks, Unity, etc.
 - Serving in Singapore Armed Forces as part of the Cyber Defence Group
-- Assisted Helloholo in VR and AR software research and development
-- Experimented with and created multi-platform binary exploits and malwares
-- Expanded on computer renderings with realistic 3D models and textures, including animations and motion tracking
+- Worked at Helloholo in VR and AR software research and development
 - Participating in several CTF competitions with 2 CTF teams, (CTFSG and ducks0ci3ty)
-- Studied SLAE, starting on OSCP in the future
 
 </div>
 
@@ -77,7 +73,6 @@ permalink: /about/
 
 - Learn Javascript and Java
 - Did shaders in Processing, p5.js and THREE.js
-- Started on computer renderings with abstract 3D models
 - [Previous Portfolio Site](https://mcdullti.github.io/homepage)
 
 </div>
