@@ -7,9 +7,14 @@ permalink: /about/
 
 <div class="section" id="section1" markdown="1">
 
+# 2025
+
+- Interning at Centre for Strategic Infocomm Technologies as a Cyber Security Engineer as part of SIT's Integrated Work Study Programme
+
 # 2024
 
-- Learn Vision-based AI, etc.
+- Learn Vision-based AI, Depth-based AI etc.
+- Interning at Centre for Strategic Infocomm Technologies as a Cyber Security Engineer as part of SIT's Integrated Work Study Programme
 - Interned at watchTowr as a Cyber Security Engineer to assist in automating continuous assurance and adversary sight
 - Solved CSIT Mini Challenge ([Badge]({{ site.baseurl }}/assets/img/csit-cny-challenge-2024.png))
 
