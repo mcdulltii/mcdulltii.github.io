@@ -9,7 +9,8 @@ permalink: /about/
 
 # 2025
 
-- Interning at Centre for Strategic Infocomm Technologies as a Cyber Security Engineer as part of SIT's Integrated Work Study Programme
+- Interned at Centre for Strategic Infocomm Technologies as a Cyber Security Engineer as part of SIT's Integrated Work Study Programme
+- Graduated with first-class honours for [Bachelor of Science, Computing Science](https://www.singaporetech.edu.sg/undergraduate-programmes/computing-science), a three-year direct honours degree programme jointly offered by SIT and the University of Glasgow
 
 # 2024
 
